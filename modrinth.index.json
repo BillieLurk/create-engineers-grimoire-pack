@@ -1,0 +1,849 @@
+{
+  "formatVersion": 1,
+  "game": "minecraft",
+  "versionId": "1.0.0",
+  "name": "Create Engineers' Grimoire",
+  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals.",
+  "files": [
+    {
+      "path": "mods/create-1.21.1-6.0.10.jar",
+      "hashes": {
+        "sha1": "0e97e49837bed766e6f28a4c95b04885d6acc353",
+        "sha512": "11cc8fc049d2f67f6548c7abfada6b82a3adb5c7ca410a742de04bbca76e03862c518721b88d806f6e6d768a4d68531fdb903a85859b25d1484d550cc7bafd4b"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar"
+      ],
+      "fileSize": 19123767
+    },
+    {
+      "path": "mods/ars_nouveau-1.21.1-5.13.0.jar",
+      "hashes": {
+        "sha1": "b8d71856fd76d89573e6976f2461ea7385a3fff7",
+        "sha512": "62cc43cedc7fda9c4a105fdb835bf1bf98fd64c6e0901854d4a84b758a8173d02c4dc119943f5585361c33dd49d1c3fb73ed3a4567e70a9346fcb171cb5acd98"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/TKB6INcv/versions/ugLa4qlw/ars_nouveau-1.21.1-5.13.0.jar"
+      ],
+      "fileSize": 20096005
+    },
+    {
+      "path": "mods/create-aeronautics-bundled-1.21.1-1.3.1.jar",
+      "hashes": {
+        "sha1": "15d273d891578d583aa142354b63ed70f87fee62",
+        "sha512": "16ba7a2c8335443bdf6ad4777737b762f09452be2dd364f801fd20b35eb581473161763699ec37eb12d1aeaf8c18cf8299b2152e24334eedcc9fe662af5bbb27"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/oWaK0Q19/versions/Vzp221Un/create-aeronautics-bundled-1.21.1-1.3.1.jar"
+      ],
+      "fileSize": 33121810
+    },
+    {
+      "path": "mods/sable-neoforge-1.21.1-2.0.5.jar",
+      "hashes": {
+        "sha1": "05f666e973d32baaaf405acb9bbed6615b909971",
+        "sha512": "bf3d8c87bcc5efb99afffd50305fc978086ed48a63e106816e3a8a3901f8052f4480ea527dbd7d4003f7775ed4d020529098034f4e307aefac9cc42df2b4c19a"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar"
+      ],
+      "fileSize": 12986136
+    },
+    {
+      "path": "mods/createaddition-1.7.0.jar",
+      "hashes": {
+        "sha1": "fd73ba9809ed6656a8c2aae81c9badb382085657",
+        "sha512": "267779bf2a215a0be39748e6a8e387322df697bc9de8e7e9558e6885aa790a2e73f334a55bfc5f97f4130d22262011433675fd0830ab1e3e3b10c9898d8a702c"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/kU1G12Nn/versions/zlC557Yg/createaddition-1.7.0.jar"
+      ],
+      "fileSize": 1705668
+    },
+    {
+      "path": "mods/createbigcannons-5.11.7+mc.1.21.1.jar",
+      "hashes": {
+        "sha1": "c90ee0b2142e2c58d233e150cb3a24c7cb07eb2d",
+        "sha512": "24f414dfbb973a0f4d9c9b2aa059edc7bed4d23b4f39eb1f7d23a1d6b437e3b5d64cca6e4b85ff7eb2815743fa711d54ad652bffe96d1eb1234544716006440d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/GWp4jCJj/versions/bOiDu0LS/createbigcannons-5.11.7%2Bmc.1.21.1.jar"
+      ],
+      "fileSize": 3771506
+    },
+    {
+      "path": "mods/ritchiesprojectilelib-2.1.2+mc.1.21.1-neoforge.jar",
+      "hashes": {
+        "sha1": "ec2e4996f8bee8714173e603e379fef8a6901765",
+        "sha512": "6d64c84505a5a8fbb96d106603065465c5a2314ec09636900c5c1a31014c12fa68f1a41e758313cbf0d6f95d9a1f53bd67339020f7d8db0e184c23f66aee0330"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/B3pb093D/versions/hZ6B2Z0x/ritchiesprojectilelib-2.1.2%2Bmc.1.21.1-neoforge.jar"
+      ],
+      "fileSize": 76369
+    },
+    {
+      "path": "mods/createdeco-2.1.3.jar",
+      "hashes": {
+        "sha1": "93d9eff58b46c6953e907d071e6be4e3ce07be38",
+        "sha512": "c536662f9d47ad57a37419165ded14835b23ad6c3e82a920298ecd7ee074244b0b6062ef9cc7ea4501ddd35919a840faccd7fc64e43eb8df31e12076681c3c0d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/sMvUb4Rb/versions/qrcMVoBD/createdeco-2.1.3.jar"
+      ],
+      "fileSize": 3328498
+    },
+    {
+      "path": "mods/create-enchantment-industry-2.5.2.jar",
+      "hashes": {
+        "sha1": "2ff3e1584512c205f17db923a22082c317a12f32",
+        "sha512": "e5c049bf06fe231d44f37a2427a95a327d6327b1d2547d3f086a22342a03a3c618c9df9c26d3fd04be5b029b20764eee33425ab7bd523e8b96a65c7d76930705"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/JWGBpFUP/versions/LOammszO/create-enchantment-industry-2.5.2.jar"
+      ],
+      "fileSize": 1602815
+    },
+    {
+      "path": "mods/CreateDragonsPlus-1.11.7b.jar",
+      "hashes": {
+        "sha1": "36085362f1123273a2d8e8e7e8af86c32ac10251",
+        "sha512": "4b86f50641b95532d8662e333b1805f0938bf49d1fd9ee7bd4920dca7a4c3707e11f95d44d6a6ce250acc0d534f08ffd2a7891308d587c4d63ce63be3377ae83"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/dzb1a5WV/versions/zQDQbNih/CreateDragonsPlus-1.11.7b.jar"
+      ],
+      "fileSize": 1038830
+    },
+    {
+      "path": "mods/create-new-age-1.2.0+neoforge-mc1.21.1.jar",
+      "hashes": {
+        "sha1": "849df57070ffa75c2446b9c460d03f6b49fa089e",
+        "sha512": "5075c6482b800af7044b594ad694855e7d56f386cb0354967eafe99d77e84b4e26ee7f880d287672d24d84ea8086fd074b7695e46632f32f215b31ce859ada72"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/FTeXqI9v/versions/IwtuwMZy/create-new-age-1.2.0%2Bneoforge-mc1.21.1.jar"
+      ],
+      "fileSize": 1644485
+    },
+    {
+      "path": "mods/create_connected-1.3.2-mc1.21.1.jar",
+      "hashes": {
+        "sha1": "920de05b13c32fe1417d0aec0615057aa480cc8d",
+        "sha512": "b07bfbc5ebf0ad63b1db5f7215f0e11490f0263623e344b09a63116d84199a49c7f916610410262ddb640e60017d08e89f3363ada38a6219ac6a5b2fc19322e0"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Vg5TIO6d/versions/klOWKza5/create_connected-1.3.2-mc1.21.1.jar"
+      ],
+      "fileSize": 6779410
+    },
+    {
+      "path": "mods/create_mechanical_extruder-1.21.1-2.2.2-6.0.10.jar",
+      "hashes": {
+        "sha1": "9de27d604a71a3aeb4f197e725b31fe6af3202f2",
+        "sha512": "efeb01312cb00800cc11e7765759b31058719e6a7c62744b453d242c4da7b75091b68eef2f489054a1244244a63672a46f4822a580eb8d8c64045a189e671827"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/hGAlcCDJ/versions/fFDOEXAA/create_mechanical_extruder-1.21.1-2.2.2-6.0.10.jar"
+      ],
+      "fileSize": 523501
+    },
+    {
+      "path": "mods/mechanicals-1.21.1-1.1.6.jar",
+      "hashes": {
+        "sha1": "65818a9a904983c39acfd7b2da3fe784bd35e83b",
+        "sha512": "84bfcd2cbd061eb1516fc2adbca0e599a38372b80ef9f5713de70be48d072243b1c5cb84c13177c35f333b6bcf16aa1f70dbd0964ed18e14c2bff733c531c6bc"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ProvjTA7/versions/GBSlpwLT/mechanicals-1.21.1-1.1.6.jar"
+      ],
+      "fileSize": 2022181
+    },
+    {
+      "path": "mods/create-stuff-additions1.21.1_v2.1.4b.jar",
+      "hashes": {
+        "sha1": "246915560f74b92e0186c22da26be8995380c443",
+        "sha512": "75cd8a0a2f898b3599cb267c26c02691e53f8ca8f6c6c4f16d1a82db8fea4494988f163559cc3a8b471683d5b52353ba065def8846a7ff2073bddf42e68b5e7d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/aq9qUUQG/versions/gMWQ1LX9/create-stuff-additions1.21.1_v2.1.4b.jar"
+      ],
+      "fileSize": 1347181
+    },
+    {
+      "path": "mods/jei-1.21.1-neoforge-19.44.0.403.jar",
+      "hashes": {
+        "sha1": "f027864a444572205a546c78c48b882335540eb2",
+        "sha512": "868d8d30dfd5055f65e6f476690a41189be9157b08b52961ded3febc7b577b2940a444209d32868a6f736656cb8dcacf7e252b9b66e16f9780e4768d4d775b01"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/u6dRKJwZ/versions/LtwmFHuF/jei-1.21.1-neoforge-19.44.0.403.jar"
+      ],
+      "fileSize": 1698112
+    },
+    {
+      "path": "mods/ars_creo-1.21.1-5.2.0.jar",
+      "hashes": {
+        "sha1": "198e3030b6fcb7899ba254ab3a41065f7583ec16",
+        "sha512": "eda495d812c1e8dff4a22c5084ecdbb911b1d0844d6df57f6567c68d927b0b50574c2c54861b4cd8bd555011968b150a2bd2e354d3c4e0ed1a1709bd75e6c014"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/fZ324GMc/versions/qXMGsOrj/ars_creo-1.21.1-5.2.0.jar"
+      ],
+      "fileSize": 74589
+    },
+    {
+      "path": "mods/BiomesOPlenty-neoforge-1.21.1-21.1.0.14.jar",
+      "hashes": {
+        "sha1": "294ae397c011980623bf155f9dfce82bb81865a0",
+        "sha512": "1569d9ed5b619f99d61a7cf1b2d886b278df2905b3ce9324f8e7a17c5c960312ec681cc06f1ad96644bde2cdc60440d8be9952f0ee0f84f7937210f46fbb21d7"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/HXF82T3G/versions/BtZKRp69/BiomesOPlenty-neoforge-1.21.1-21.1.0.14.jar"
+      ],
+      "fileSize": 22338156
+    },
+    {
+      "path": "mods/GlitchCore-neoforge-1.21.1-2.1.0.2.jar",
+      "hashes": {
+        "sha1": "e3d4bb80a06f619be989ab529d0cd4e33e076943",
+        "sha512": "7a009ed163d03536fdfaee7b37cb1ec3073204dffcb06a683369aa88da8dbc3780b0ac69d466bb32a3ad9394c97b698d0fda676e1b4dd4edfc50ac5aa2283c32"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/s3dmwKy5/versions/S2TfWrZR/GlitchCore-neoforge-1.21.1-2.1.0.2.jar"
+      ],
+      "fileSize": 90717
+    },
+    {
+      "path": "mods/TerraBlender-neoforge-1.21.1-4.1.0.8.jar",
+      "hashes": {
+        "sha1": "744394d979b422be560babf9df7a6800ede9ac5b",
+        "sha512": "9d4b2a1be5139c0fb2fad92ed21805b17d9e83b6ea48e637e018bb14063c1823a206390755dbfe8d025c20fd62ac11cdd84db53ddb956dabaeda01bff57bac50"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/kkmrDlKT/versions/6e8GCrLb/TerraBlender-neoforge-1.21.1-4.1.0.8.jar"
+      ],
+      "fileSize": 120365
+    },
+    {
+      "path": "mods/YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar",
+      "hashes": {
+        "sha1": "73a660c13063450e555e5e2c015ae24d606b32b4",
+        "sha512": "40513bacd13fa9860abcab507b1fc09dc51649af4b615ce466e0ec361557f02d35e6e44bea1cc17cb4120805f862aad01394eb185f46611e7be63dfd97f272df"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/o1C1Dkj5/versions/D6aZn0Em/YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar"
+      ],
+      "fileSize": 782160
+    },
+    {
+      "path": "mods/YungsApi-1.21.1-NeoForge-5.1.7.jar",
+      "hashes": {
+        "sha1": "1c2e7b0d294690f9ed5e6627ba28182605543654",
+        "sha512": "149b0da464a65ffa28567a4a94bbbb764151fd9b17d2170302c14c9f76ff7f86f49b8478186ab1066e4cac7c31509b83a0c95292708698278130b7e25988e5c9"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Ua7DFN59/versions/8Zmd0JGx/YungsApi-1.21.1-NeoForge-5.1.7.jar"
+      ],
+      "fileSize": 389951
+    },
+    {
+      "path": "mods/curios-neoforge-9.5.1+1.21.1.jar",
+      "hashes": {
+        "sha1": "418fcd42e3a7844c9bdc71c9b6401fdb3894e0c4",
+        "sha512": "5981a267686b744e7e3c227f78cbcd5267c14ac6979a28e814695f4589273998563147207fef4a5cdb7cdbdc39797cd95d9e4abadb55869f18e02a38d0654ae5"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/vvuO3ImH/versions/yohfFbgD/curios-neoforge-9.5.1%2B1.21.1.jar"
+      ],
+      "fileSize": 410690
+    },
+    {
+      "path": "mods/geckolib-neoforge-1.21.1-4.9.2.jar",
+      "hashes": {
+        "sha1": "14c64013cadee7d28f3685f94350f9a4d2ec6d86",
+        "sha512": "c91012b16cc40c8f48f69b78cb8e2e5c006486ae2431fbd289dfc01be7a4217294becea22d83a155d6b32b3969450df871352a3695e1452168b84f41355f7b9e"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/8BmcQJ2H/versions/tPkJmim6/geckolib-neoforge-1.21.1-4.9.2.jar"
+      ],
+      "fileSize": 630584
+    },
+    {
+      "path": "mods/Jade-1.21.1-NeoForge-15.10.6.jar",
+      "hashes": {
+        "sha1": "88ee316e68900080b017f60c12162e2731924cf8",
+        "sha512": "dad9755dce8d85d914fc4df2baa0211f13e5839a71c1925fdd01f69081a95e30a2934e6273f8b01f0169adebe7a9dae57a8d904de0c4cb36dc17369bb474f0f2"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/nvQzSEkH/versions/eYz2YBGT/Jade-1.21.1-NeoForge-15.10.6.jar"
+      ],
+      "fileSize": 726853
+    },
+    {
+      "path": "mods/appleskin-neoforge-mc1.21-3.0.9.jar",
+      "hashes": {
+        "sha1": "81cf0e668f991f83ac8820c386fbd6c9c3602246",
+        "sha512": "f4ea46273e407334b63e262e2555c9a8204f7b5e60f23f272fbaa83ad9e88800e0ee186aca840710df2dbe0a18b37758695fef2ae1a902c10b3706e3de772937"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/EsAfCjCV/versions/uAKA6Laj/appleskin-neoforge-mc1.21-3.0.9.jar"
+      ],
+      "fileSize": 75804
+    },
+    {
+      "path": "mods/xaerominimap-neoforge-1.21.1-26.4.2.jar",
+      "hashes": {
+        "sha1": "21b3232e62dabcbb5bf28866481e8de2c0ccb780",
+        "sha512": "7ece42b6665cb3a83d77bca1ae9ab31e9f418a7e0ee73f4be1839b62a8dde7e2727d554b6ed056ca4e7510c1aaa6603e5caaa62355bca9ff202171df73ac49ee"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/1bokaNcj/versions/JXvcT1hp/xaerominimap-neoforge-1.21.1-26.4.2.jar"
+      ],
+      "fileSize": 2185409
+    },
+    {
+      "path": "mods/MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "hashes": {
+        "sha1": "6dae57f4f50f7808d2ed9a18f6cd1c0d4640c6bc",
+        "sha512": "f95c0cc881211ee0442434976775e07aae40b4a2ba4e3a85455bc57ca9d3c991e239cd98374a8abd442dc9c378dcd9001e2caa1bf69991d424b5652dd7f3483b"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar"
+      ],
+      "fileSize": 73938
+    },
+    {
+      "path": "mods/Clumps-neoforge-1.21.1-19.0.0.1.jar",
+      "hashes": {
+        "sha1": "fa2576297c7bd12b28aa7070e8141792bd66da4c",
+        "sha512": "314d8d8e640d73041f27e0f3f2cad7aad8b4c77dbd7fb31700ef7760362261f77085eed5289555c725d99c3f47a114e7290cd608f39c9f0f12ef74958463bdcc"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Wnxd13zP/versions/jo7lDoK4/Clumps-neoforge-1.21.1-19.0.0.1.jar"
+      ],
+      "fileSize": 18382
+    },
+    {
+      "path": "mods/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar",
+      "hashes": {
+        "sha1": "df25e8cfe06917963778723a1d9a60610dd21bec",
+        "sha512": "d4199f92f992fbd2c75a3b0e4e81c8a98bee889013f7347f2149ffa62c86748bde22135e9b2c82a10875db94fa576571c661c5ee16d2f567bd8a93d6f255fd22"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/uCdwusMi/versions/ZpKb4kZp/DistantHorizons-3.2.0-b-1.21.1-fabric-neoforge.jar"
+      ],
+      "fileSize": 30207268
+    },
+    {
+      "path": "mods/YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar",
+      "hashes": {
+        "sha1": "5d06a5850af7c577612d4592706a8e156bbe1cbf",
+        "sha512": "385d67e07f2c67af5ea387d92d92949d8f671e8f99204457b6396dbe987ac3b14c2bff765df5fcbaa68016604f82a1fc6ec5a69c012ca22ad088d1a7c9bc135d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/kidLKymU/versions/8U0dIfSM/YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar"
+      ],
+      "fileSize": 461244
+    },
+    {
+      "path": "mods/YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar",
+      "hashes": {
+        "sha1": "fba629defdb92ad99ec4f411895afb6e19555a18",
+        "sha512": "77c864da36f1d2173e6460dc335996893a804954b8a5c274173fc95dfdbf437e80d9dce32f6060306a662fc35322566eecf5dfe24e2d3fab79bf7e0ff9fa4db6"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/3dT9sgt4/versions/yFjEcj2g/YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar"
+      ],
+      "fileSize": 1025571
+    },
+    {
+      "path": "mods/repurposed_structures-7.5.22+1.21.1-neoforge.jar",
+      "hashes": {
+        "sha1": "a64f6b2d331d5c3a5feefcd18d23f4585a42b097",
+        "sha512": "cb6d22bc8d426aefda37ba63dcd0346db342157500e86782ebf142d09cc81970d4745b81b760a639e5734f91d9f3275d6430d4a8c54dfd8256e732ea682e8bd2"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/QDNS5oAT/versions/8duZuWci/repurposed_structures-7.5.22%2B1.21.1-neoforge.jar"
+      ],
+      "fileSize": 8246760
+    },
+    {
+      "path": "mods/L_Ender's Cataclysm 1.21.1-3.33.jar",
+      "hashes": {
+        "sha1": "5ff39c0eddfa08ea0e921bdcb17da7f32f0b00ce",
+        "sha512": "359ad3681aba479486519a79fd227afc608b66d2843afe1f6c7196da6807683792b4ecea761e824f15b03d13d6ff29380b439bdd5bb1d2472a065ae8e83743d9"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/46KJle7n/versions/mYBUDZWl/L_Ender%27s%20Cataclysm%201.21.1-3.33.jar"
+      ],
+      "fileSize": 73375661
+    },
+    {
+      "path": "mods/lionfishapi-3.1.jar",
+      "hashes": {
+        "sha1": "353ca00ed118eb67cf11085abbbd699884722326",
+        "sha512": "fdd90f19d0424c3a837111291d6ac1547d62cbcedd43b74d3a8946912f9c5212a5ea239a6969eccf678289bcb77cbb9a937db01fdaf60e57826f9a99893d19cb"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/FoVacERa/versions/fTRMVgyZ/lionfishapi-3.1.jar"
+      ],
+      "fileSize": 91596
+    },
+    {
+      "path": "mods/deeperdarker-neoforge-1.21.1-1.4.1.jar",
+      "hashes": {
+        "sha1": "b6094adde68bd4b909bc75c64901e1f3fb99ad8f",
+        "sha512": "38d8d87878f39a063feb029db17702bedadf7554233ae56db6018c21225b6dff4d4cc31f4b0995254fd488e2a687f3b15bf9647c59dd42b9032791d34316ed0c"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/fnAffV0n/versions/TuD0Zvi3/deeperdarker-neoforge-1.21.1-1.4.1.jar"
+      ],
+      "fileSize": 3906057
+    },
+    {
+      "path": "mods/floating_islands-1.5.2-1.21.1-neoforge.jar",
+      "hashes": {
+        "sha1": "69649cd9ce533b3d17baa98d2bdca13f33c63887",
+        "sha512": "03b1288c1142f966f1fe67a14155be610877647c89627c6ca8608366339268529b7d7975087611678dcec77c485d1ae7345d00bee4daa400f2e94a56733b1300"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Ii9sVXDo/versions/ZH7sOYRn/floating_islands-1.5.2-1.21.1-neoforge.jar"
+      ],
+      "fileSize": 425011
+    },
+    {
+      "path": "mods/createdieselgenerators-1.21.1-1.3.15.jar",
+      "hashes": {
+        "sha1": "7f751dabfa83c141c1d13025cd16f06553ba459b",
+        "sha512": "1507ebcd07d3185aac3ae6ce768b4d6bab16cb6f39776d25a850c8133a4dc5826b8ddbeca112d76afc64deaa37ec177cac4237c6c34621c4b65e73d83f8ab43f"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ZM3tt6p1/versions/UoPH8lO1/createdieselgenerators-1.21.1-1.3.15.jar"
+      ],
+      "fileSize": 3154746
+    },
+    {
+      "path": "mods/createframed-1.21.1-1.8.2.jar",
+      "hashes": {
+        "sha1": "222c998ffc62cd734e1318134c7f182c68f2b527",
+        "sha512": "38a3ad408a563543ebee89da2e3dd624188864d42d2d208ac695f2fc2240f6a3c26746ec516aa4b1e0ff45ced8de97317328dbae594bb18f914003680bceaf00"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/15fFZ3f4/versions/yioQUGiO/createframed-1.21.1-1.8.2.jar"
+      ],
+      "fileSize": 2871366
+    },
+    {
+      "path": "mods/ars_controle-1.21.1-1.6.15.jar",
+      "hashes": {
+        "sha1": "fdf381d5733698abe336354c7541299ab495ecae",
+        "sha512": "d1e0d8a58d23ab127cf1fc804b84dc088167d27acd6d0eed224a40f9d4b5627344f4f1df8fb38dd7066dc0a5652b71727dcfff232ffeb78a0f7e627ebfac4bcb"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/gL8ijqNQ/versions/VoAKOuBm/ars_controle-1.21.1-1.6.15.jar"
+      ],
+      "fileSize": 316368
+    },
+    {
+      "path": "mods/Patchouli-1.21.1-93-NEOFORGE.jar",
+      "hashes": {
+        "sha1": "5413bb9b8fc35ebe46b06b48bf9afafbd8471140",
+        "sha512": "0b5c172db9a6eeecb5ca44b359a83548c3a60be7ff313959acdfc1e5b8039736c18e57e947d435b52d06da31159d2d02ea36e5742668dbc826308a4c99e4039f"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/nU0bVIaL/versions/BIogJv2D/Patchouli-1.21.1-93-NEOFORGE.jar"
+      ],
+      "fileSize": 646777
+    },
+    {
+      "path": "mods/ars_additions-1.21.1-21.2.3.jar",
+      "hashes": {
+        "sha1": "1f230a275b130d4506d288fcc6bb07948bcedc51",
+        "sha512": "19dc30e15f4364c0dd0c71fe84917164880d8d29aa6942d5ea7c664faf877ec52ffad51efc8dd691c4c9acdb80d2d45a8fc45ed457cfac9de8634445d88b4ea7"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/GYK6Gk8R/versions/B0CEA8jG/ars_additions-1.21.1-21.2.3.jar"
+      ],
+      "fileSize": 1406021
+    },
+    {
+      "path": "mods/aquamirae-neoforge-1.21.1-7.2.1.jar",
+      "hashes": {
+        "sha1": "d1a2162eeb9b5e1b3db318ee33e8ba070d71f304",
+        "sha512": "6b523137a05c4709a927268cc63d56948ce5a7d78ae29e942d921d162fdfe6108d4fa140c3b7f029788d6d705abc0103d03c470721dd3736bfff4b7d6e722f15"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/k23mNPhZ/versions/usuA98Eb/aquamirae-neoforge-1.21.1-7.2.1.jar"
+      ],
+      "fileSize": 26119991
+    },
+    {
+      "path": "mods/fragmentum-neoforge-1.21.1-2.4.4.jar",
+      "hashes": {
+        "sha1": "09995d8f0da787acdf5df590defc8dd38cf69884",
+        "sha512": "d86d4e2386f853e768659f0beb8debee6d9b0b17d081ec8ab8dcb171edbfa819bcdb49f5572734e680a73ab641de053d7bc103c742b0e487854506052b704cac"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/49C5QgTK/versions/A7zWreFf/fragmentum-neoforge-1.21.1-2.4.4.jar"
+      ],
+      "fileSize": 1939369
+    },
+    {
+      "path": "mods/create_submarine-2.2.4.jar",
+      "hashes": {
+        "sha1": "fb4902c2ca3463ea3016efbae7011408eb008d89",
+        "sha512": "6b87d72f1036489c44cd033170abe10f8b5210ef8265823f29cd51531444e78384863ca321b7cdcc23924940161226327ab774cfd1d91d5e2ea8ba599b0eae31"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/mva5q4qZ/versions/UcXaPVeD/create_submarine-2.2.4.jar"
+      ],
+      "fileSize": 1869296
+    },
+    {
+      "path": "mods/MOTS-NeoForge-1.21.1-1.3.0.jar",
+      "hashes": {
+        "sha1": "abba421e416e36e1439baae292ca441823ca9667",
+        "sha512": "187de06f78e0bc3d8365201341577177620ae389248eec841e2d5444fb25e2aeba04a1c1cda7d3422a000465ab5cb5af44c0b66c667f240764aabcf722cf64ad"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/WaCchT6K/versions/veASg7rX/MOTS-NeoForge-1.21.1-1.3.0.jar"
+      ],
+      "fileSize": 8387535
+    },
+    {
+      "path": "mods/HopoBetterUnderwaterRuins-[1.21.1-1.21.3]-1.2.1b.jar",
+      "hashes": {
+        "sha1": "1e033af9a73d11f68af304d1a46821c0118a70ca",
+        "sha512": "a659df6cc3409c8c334e034ffb7da09af08b084e22d5cc7c5e99c609727c5034dd0f4c1dce8f75fe6c845edb9a85b31d2b6605dd4870b1da4c2e1445fda749f7"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/BuWCQzqf/versions/cCUmdH6y/HopoBetterUnderwaterRuins-%5B1.21.1-1.21.3%5D-1.2.1b.jar"
+      ],
+      "fileSize": 686447
+    },
+    {
+      "path": "mods/Aquaculture-1.21.1-2.7.21.jar",
+      "hashes": {
+        "sha1": "93c2043c6a5cfbfbfba93321d044bc61d8a6547b",
+        "sha512": "532571f9a9d336d7da4b175f482c2d99c31f440841f9d20dd58137e1df3218180badd54d178559fdc0ac3e08ff94eaf3f1c4d133b9e60c66775971c0a557386d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Vl1uNAuy/versions/5pbz0ETj/Aquaculture-1.21.1-2.7.21.jar"
+      ],
+      "fileSize": 605949
+    },
+    {
+      "path": "mods/iris-neoforge-1.8.14-beta.1+mc1.21.1.jar",
+      "hashes": {
+        "sha1": "1bd129cf7bce65d6b1c0543045f0620c98a0f885",
+        "sha512": "33fddb430e16222902eac75b8b3d57c381b0f3cc729f3b56c4628df12ca108f23a0b11e2feb167923d6d14d1fc7e8ee1a977ec421b19d1951bdca74c4092b9c5"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar"
+      ],
+      "fileSize": 2540723
+    },
+    {
+      "path": "mods/sodium-neoforge-0.8.13-beta.2+mc1.21.1.jar",
+      "hashes": {
+        "sha1": "af0f6e28638b1e6696d0501dd8496d230e9519ae",
+        "sha512": "6e9273862fb3397b5abea7ad37a65c3cd6d6bcb5cc06634d2b62b49999c00dac8972e4600e1d5b3c3936d0a92ccfad8ed4d04ed065595797d3c1e559f20aa08c"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/AANobbMI/versions/jfHZ5pyN/sodium-neoforge-0.8.13-beta.2%2Bmc1.21.1.jar"
+      ],
+      "fileSize": 1292887
+    },
+    {
+      "path": "mods/iris-flywheel-compat-NeoForge-2.4.0.jar",
+      "hashes": {
+        "sha1": "b8630517b6017f4d075ce594e5ef333b38748029",
+        "sha512": "192e5f00f2c146d2920867d7cd691ecec7ddd2acfb95880cc59084e8949225db92ecfb9221ba7223fc924ec43f2ca861115f83f9dc3f79e14a2f2a8db5287070"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ndHYMY2K/versions/6ZQz5Ow2/iris-flywheel-compat-NeoForge-2.4.0.jar"
+      ],
+      "fileSize": 907133
+    },
+    {
+      "path": "shaderpacks/ComplementaryReimagined_r5.8.1.zip",
+      "hashes": {
+        "sha1": "5a021081f0178ed91dd911194071465ab0a4348b",
+        "sha512": "6bd95215755d25812556ce790d976221f7d677d63112e3e4d3e70b08a62ed41348fa3792dd31bbe720d1e46fe2d525cadb4f66e6358118e1f4aa8e0d11f25c39"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/HVnmMxH1/versions/yCCduG44/ComplementaryReimagined_r5.8.1.zip"
+      ],
+      "fileSize": 546925
+    },
+    {
+      "path": "shaderpacks/BSL_v10.1.3.zip",
+      "hashes": {
+        "sha1": "c2459c82c23dc7442eaf1976dade30c2c2f18a9f",
+        "sha512": "3e68c8038e38b0860cf1258e5fc84bcd98007a70fb7ba49e306186be6e905187527b630b77cb9e8cc8ee80865606c0fb398c419a22f0076b2ed5c7d73748a9ba"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Q1vvjJYV/versions/hIibTfxn/BSL_v10.1.3.zip"
+      ],
+      "fileSize": 1127026
+    },
+    {
+      "path": "shaderpacks/rethinking-voxels_r0.1-beta9.zip",
+      "hashes": {
+        "sha1": "9689915ec1a7215eb6060be2a08eaf3a09ebdbab",
+        "sha512": "1e32f41e67e527c3c60149677a05b61c6d305e440812e29abba745b8ed304954780ca48d58b834c49835790bc3c4d38f37c893c5cbdfea9edc07b72e1dabd296"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/kmwfVOoi/versions/cpD4esk9/rethinking-voxels_r0.1-beta9.zip"
+      ],
+      "fileSize": 8301317
+    },
+    {
+      "path": "mods/Incendium_1.21.x_v5.4.4.jar",
+      "hashes": {
+        "sha1": "40da6da25ec45c4d88447733255e4281b6f22fef",
+        "sha512": "ca897be9059ea691860715dac6c0ccd934720d7d42c8af45b95257e8f91a6c9470f506bfb9ef3c770e6a6c57e58885add2126150a35927848817433fd227ce0e"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ZVzW5oNS/versions/7mVvV9Th/Incendium_1.21.x_v5.4.4.jar"
+      ],
+      "fileSize": 4267528
+    },
+    {
+      "path": "mods/Nullscape_1.21.x_v1.2.14.jar",
+      "hashes": {
+        "sha1": "ae8e1cbd5de6cf6f450bb44cd69cd284dad690dd",
+        "sha512": "b35a9dfdc7180ca851aea378ee4687e18b3aae717c16870a7762afc67dc0c77598fb2c4a62cb12d6ed0eacf7c9166520e0a3e7dce20da09817065d27e62c8b44"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/LPjGiSO4/versions/3fv8O3xX/Nullscape_1.21.x_v1.2.14.jar"
+      ],
+      "fileSize": 355748
+    },
+    {
+      "path": "mods/YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar",
+      "hashes": {
+        "sha1": "4061ece2141475227646649046fc14c2da505922",
+        "sha512": "18b461298d3df1215fa3b4d2c0cb2ef1c7ed76701d8a0bb140277b21923e31abd939f0fd9b400c5bd676d739f1cda31c43b4dc753f9187251542223f3424d336"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Z2mXHnxP/versions/iopJiJQp/YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar"
+      ],
+      "fileSize": 609639
+    },
+    {
+      "path": "mods/naturalist-2.0.3-neoforge-1.21.1.jar",
+      "hashes": {
+        "sha1": "addb9794fe723d094ddc622b1234944727a542fa",
+        "sha512": "fa6fbe15ecf3d1a9621849274e97895b277762c334609a96d20714e469b2dd6b1a04d333077acf126aed1e1fb5222a5de7331525eb5eef17d93cab59573c5ba4"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/F8BQNPWX/versions/BLB7ktFs/naturalist-2.0.3-neoforge-1.21.1.jar"
+      ],
+      "fileSize": 11309342
+    },
+    {
+      "path": "mods/crittersandcompanions-neoforge-1.21.1-2.7.0.jar",
+      "hashes": {
+        "sha1": "957286bd79fd0b735c2e9619a249dde77292ca06",
+        "sha512": "f93bb48b07122d1c93cd931169752814c46f2ed964da987ab5ce654e8f70242c57265c3853bbb357f5fd95c412e775bf7b9a2abeb2a2a0858eae95c8d8ba451d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Yd4wb5wZ/versions/aeDUpTJS/crittersandcompanions-neoforge-1.21.1-2.7.0.jar"
+      ],
+      "fileSize": 2098079
+    },
+    {
+      "path": "mods/architectury-13.0.11-neoforge.jar",
+      "hashes": {
+        "sha1": "008656a0702801174b8ec245ed7aad1921d6e9f1",
+        "sha512": "d9f7c3bb8162577dfb461ffdf04bd6a3563c7586934a0e2a744c14421beffb8286f0d88d4c758317003f20f99fe8072a39b9d675af061e036970d36db36027f0"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar"
+      ],
+      "fileSize": 584734
+    },
+    {
+      "path": "mods/yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar",
+      "hashes": {
+        "sha1": "fe270c9f6e0a8142cf316944087f5109cef08bbb",
+        "sha512": "583de19b927ce8050c2b7d5e60b75accc69e325e5aac85c27994c82a9dec2e4e078343fa1d4c3a10d4bd7e0e524e0b3b246a18cf03db01e363a1e6f865adcf48"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/1eAoo2KR/versions/7TVdVtxF/yet_another_config_lib_v3-3.8.2%2B1.21.1-neoforge.jar"
+      ],
+      "fileSize": 1118651
+    },
+    {
+      "path": "mods/vanilla-fireflies-3.1.jar",
+      "hashes": {
+        "sha1": "e8cd12549094417a6b6ee0fe7097818f11d3d533",
+        "sha512": "c5e49ff07c9300b428ca5be6632226babdec306ce9a2d07748821c755c6b03c9048b9b7381d2b17a2350c9b5873f0c74f214491a910b2703f3c6f593f8609bec"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/dxiyDLYV/versions/5qSXJH5D/vanilla-fireflies-3.1.jar"
+      ],
+      "fileSize": 682396
+    },
+    {
+      "path": "mods/CerbonsAPI-NeoForge-1.21-1.3.0.jar",
+      "hashes": {
+        "sha1": "3f0d3eed4633d9ef3a713de4b39ee4e683aa9389",
+        "sha512": "6bd24b718d532cdd0c49150eefc223b4d7c3550bbc81d5c65ed84b704bf3c8e20d3cb3524082688383cc4aba38e190921976b056b84d5755670c5399a7c7e627"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/GkIc6rRo/versions/5wbxkBQ1/CerbonsAPI-NeoForge-1.21-1.3.0.jar"
+      ],
+      "fileSize": 250545
+    },
+    {
+      "path": "mods/rhino-2101.2.8-build.91.jar",
+      "hashes": {
+        "sha1": "56eab1d464ed0811c64040c64bd047df5cbc3aad",
+        "sha512": "e3d92f663bc07872a83b0a6474b30a75230e9f92a2844fd98da1842ec9a79712bcb7d8e76574cc11ae3aeceb47f2933c60ddd6cf41f3ad7027bd573623730945"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/sk9knFPE/versions/SqkDvOLG/rhino-2101.2.8-build.91.jar"
+      ],
+      "fileSize": 980936
+    },
+    {
+      "path": "mods/kubejs-neoforge-2101.7.2-build.368.jar",
+      "hashes": {
+        "sha1": "edf131afd474151afe076ea975ce5fec5a206ad8",
+        "sha512": "5e2f1bd1460d8f443ce4bd44ed367d27f9170e50dff2ce9430954206e89651f8969dfbe842c3100b0244f8d58f843fc5fb9c46b5c576430a07f1e5b6dd4b9f7b"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/umyGl7zF/versions/F2nzeC19/kubejs-neoforge-2101.7.2-build.368.jar"
+      ],
+      "fileSize": 2281720
+    },
+    {
+      "path": "mods/lootjs-neoforge-1.21.1-3.7.0.jar",
+      "hashes": {
+        "sha1": "54ffddd1763ae4af84e9bbcb22e4081a1e7f3556",
+        "sha512": "fab507e70197e74ffba43bd400066f55ef58c2f91cb213efedf4acd2a2ad7876d9de905f02788a0b6831304c2177fdc9996c435bcf855eabdb4daca7581270bc"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/fJFETWDN/versions/5AZDyUSn/lootjs-neoforge-1.21.1-3.7.0.jar"
+      ],
+      "fileSize": 247689
+    },
+    {
+      "path": "mods/artifacts-neoforge-13.2.3.jar",
+      "hashes": {
+        "sha1": "8247516201418bda17ef76d5ba02a3d71698477c",
+        "sha512": "ead9c301e9cc70492fe4cdeadd0473846fdde1483211a6f5ea7c4cffba79ae4c83c1ef646d160eff99eca970093fba6aaf10f3e5b20485595faf27fd2d87ac43"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/P0Mu4wcQ/versions/aE1GPGY4/artifacts-neoforge-13.2.3.jar"
+      ],
+      "fileSize": 1086882
+    },
+    {
+      "path": "mods/relics-1.21.1-0.12.8.jar",
+      "hashes": {
+        "sha1": "1fe7d57ebfa56ebd0aeecfed01075f8b55b94ef7",
+        "sha512": "4490d5d1f7ae24fe69135151b5730018ec7f2e64970349d590564c70d8d67f94d805c5680866086b4c8ba9afb4999b9c0b97b869b6fb24a90808e9ca73974b7f"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/OCJRPujW/versions/WKEe9sPL/relics-1.21.1-0.12.8.jar"
+      ],
+      "fileSize": 5007593
+    },
+    {
+      "path": "mods/OctoLib-NEOFORGE-0.6.2+1.21.jar",
+      "hashes": {
+        "sha1": "f4f66d677b104c6af7f5c0f7e3c08d8e4370ecad",
+        "sha512": "c33faa056c9d5403f06b7aa883290c86c33dcea3502f99720df98eccbd819cd3050fb2ffecf048f2dbee1b69a14e9dc6c23245f35ba3a78e46b056859666a60a"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/RH2KUdKJ/versions/yVCCi6TK/OctoLib-NEOFORGE-0.6.2%2B1.21.jar"
+      ],
+      "fileSize": 544378
+    },
+    {
+      "path": "mods/create_grappling_hooks-1.2.0.jar",
+      "hashes": {
+        "sha1": "4fadb1d2f58a416d747eaa6dd9bfc97fa70ba722",
+        "sha512": "9a2b2e6847a17af5372437cd826293ff4375fa63c900b093939572ba0f044b2694784ba82076d12772eb4ebb66803c980c10ecda050e93661a2631b78d61f8bf"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/zxlsvyWp/versions/B0LZVGnh/create_grappling_hooks-1.2.0.jar"
+      ],
+      "fileSize": 243768
+    },
+    {
+      "path": "mods/wwoo-neoforge-2.6.7.jar",
+      "hashes": {
+        "sha1": "bfc20e94b4a8ad630654993d5799bcca36fe238d",
+        "sha512": "25fbb4ba43b4031bf6b17788b95ad1374b5bd512a450c2391b4adcaba726804c43e6f91b1a2139ff2af9ae473d3ae990c4b386c52280e0a2330034f5f1b08572"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/II7t6llZ/versions/sU7oaRZv/wwoo-neoforge-2.6.7.jar"
+      ],
+      "fileSize": 5764879
+    },
+    {
+      "path": "mods/cristellib-neoforge-1.21.1-3.1.7.jar",
+      "hashes": {
+        "sha1": "d250804b7ecea365bc736ec36ec6fc3f933917f1",
+        "sha512": "6d21ceb6cd91e63a248251ded3812208ed5ea4f36abb11e8c6e16aa119a95b0e714f59ec7689ae1b1248c9831e5e3e63aa681aa7dfa9b220d93741118466cbd6"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/cl223EMc/versions/Sduz0AWP/cristellib-neoforge-1.21.1-3.1.7.jar"
+      ],
+      "fileSize": 583525
+    },
+    {
+      "path": "mods/cloth-config-15.0.140-neoforge.jar",
+      "hashes": {
+        "sha1": "c3e5733ba4503b102589a026000fd5ce0212f6f2",
+        "sha512": "aaf9b010955b8cd294e5a92f069985b18729fd5e2cf22d351f1dff9680f15488688803ec41e77e941cbde130ceb535014ca4c868047d80ab69c2d508e216654d"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/9s6osm5g/versions/izKINKFg/cloth-config-15.0.140-neoforge.jar"
+      ],
+      "fileSize": 1163890
+    },
+    {
+      "path": "mods/Chunky-NeoForge-1.4.23.jar",
+      "hashes": {
+        "sha1": "ab0c74743a653020fe2dfc4986b43e893947f3e9",
+        "sha512": "2db769dd723f243a21e1881e7c9f825e9c193da6f2bed454b70cb6fa9e51c57f63fdcf017c0657bbd26f7bba30815413e27c74d3c7be0783390a96ee9baa4bf7"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/fALzjamp/versions/LuFhm4eU/Chunky-NeoForge-1.4.23.jar"
+      ],
+      "fileSize": 340572
+    },
+    {
+      "path": "mods/cultofazazelneoforge-1.1.4.12.jar",
+      "hashes": {
+        "sha1": "fae73bb61db8d7b0f3dc5d7d446db8344679ac30",
+        "sha512": "2aeb0897ee87d68a585203fc5ec0392279721e01dbaabb2a53c6eaf0aaa8934d4ef2cc869b72c1b24e3adc1617f189af121053c69ee801874f5d79251de31f58"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/tnd2BYam/versions/soOXKDV6/cultofazazelneoforge-1.1.4.12.jar"
+      ],
+      "fileSize": 10920502
+    },
+    {
+      "path": "mods/createbionics-2.1.1.jar",
+      "hashes": {
+        "sha1": "beb93447b6be326d20ca446b4e53f229f6c4f29e",
+        "sha512": "026a10b3c220aaf5d784a847f914acb1a2e4b7b974e4c2b8e69a5555bbf4e70ce0517214438e9d3621dc2c87ebe573f1ae9dd357a6002739e0641601bcc0b28f"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/lCwu0vBo/versions/IB3jhYul/createbionics-2.1.1.jar"
+      ],
+      "fileSize": 5020027
+    }
+  ],
+  "dependencies": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.248"
+  }
+}
