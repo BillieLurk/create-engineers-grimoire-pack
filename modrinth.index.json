@@ -782,7 +782,7 @@
       "fileSize": 546925,
       "env": {
         "client": "required",
-        "server": "required"
+        "server": "unsupported"
       }
     },
     {
@@ -797,7 +797,7 @@
       "fileSize": 1127026,
       "env": {
         "client": "required",
-        "server": "required"
+        "server": "unsupported"
       }
     },
     {
@@ -812,7 +812,7 @@
       "fileSize": 8301317,
       "env": {
         "client": "required",
-        "server": "required"
+        "server": "unsupported"
       }
     },
     {
@@ -1150,5 +1150,5 @@
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 1
+  "pack_version": 2
 }
