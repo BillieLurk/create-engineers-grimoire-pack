@@ -3,7 +3,7 @@
   "game": "minecraft",
   "versionId": "1.0.0",
   "name": "Create Engineers' Grimoire",
-  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob animations/models.",
+  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob animations/models. Mowzie's Mobs for atmospheric Overworld bosses.",
   "files": [
     {
       "path": "mods/create-1.21.1-6.0.10.jar",
@@ -1189,11 +1189,22 @@
         "client": "required",
         "server": "unsupported"
       }
+    },
+    {
+      "path": "mods/mowziesmobs-1.21.1-1.8.2.jar",
+      "hashes": {
+        "sha1": "d64475cd77444b056ece6472c79d40293dc63c6c",
+        "sha512": "ab10d2f759df613d5094bac26c5a8bbe144786699018f7e4ae027fc4a86632aa7f96206f2c8be9970338eadef42539614a19b41d0d70b6216c3ed1c4c4421f0a"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/BFbX9xcm/versions/xgAXTl17/mowziesmobs-1.21.1-1.8.2.jar"
+      ],
+      "fileSize": 36042925
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 3
+  "pack_version": 4
 }
