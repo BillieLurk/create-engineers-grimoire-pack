@@ -3,7 +3,7 @@
   "game": "minecraft",
   "versionId": "1.0.0",
   "name": "Create Engineers' Grimoire",
-  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses. Farmer's Delight for cooking/farming content, with Aquaculture Delight (fish/fillet compat - uses the fillets from the fish fillet compat script) and Create: Delightful Cooking (mechanized cooking pot/cutting board automation, delivered as a world datapack) for Create integration.",
+  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses. Farmer's Delight for cooking/farming content, with Aquaculture Delight (fish/fillet compat - uses the fillets from the fish fillet compat script) and Create: Delightful Cooking (mechanized cooking pot/cutting board automation, delivered as a world datapack) for Create integration. Traveler's Backpack for portable storage, Storage Drawers for simple bulk item storage.",
   "files": [
     {
       "path": "mods/create-1.21.1-6.0.10.jar",
@@ -1290,11 +1290,41 @@
         "client": "optional",
         "server": "required"
       }
+    },
+    {
+      "path": "mods/travelersbackpack-neoforge-1.21.1-10.1.38.jar",
+      "hashes": {
+        "sha1": "99394dd89892a7eb13650c15931568246ba74305",
+        "sha512": "940e30484e2c0876649afa5e1c764f5c285266ceff01fdba42b9a23ad0d204520fe1cba2cb37e135bea505d8fc686f4bfd181146f2d264991b3302a9639a8201"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/rlloIFEV/versions/vHWNjFpl/travelersbackpack-neoforge-1.21.1-10.1.38.jar"
+      ],
+      "fileSize": 1424066,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/StorageDrawers-neoforge-1.21.1-13.11.4.jar",
+      "hashes": {
+        "sha1": "b8e11e3d1fd63fd1a0d9277ec3f966c7e5cff385",
+        "sha512": "df97b8b5053a902264a236a71e7585b78d9d48a0bce585033aa8b169896d775f6fda462cfc77431af79cc596ab356eb9642e0c69a205a46b02d4d6f7ab3e74e9"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/guitPqEi/versions/px0CCB06/StorageDrawers-neoforge-1.21.1-13.11.4.jar"
+      ],
+      "fileSize": 1131420,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 8
+  "pack_version": 9
 }
