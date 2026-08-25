@@ -50,6 +50,18 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
   load event, changes to this file need a full server restart to take
   effect, not just `/reload`.
 
+## Myths of the Sea tuning
+
+`overrides/config/myths_of_the_sea-common.toml` - another file that had
+drifted (live-edited on the server, never committed). Lowered
+`leviathanNormalSpawnProbability` from the mod's default of 7 to 1: this is
+specifically the "clear day, no rain, no thunder" spawn-roll probability
+(out of a 0-100 roll) in `LeviathanEntity.surfaceWaterSpawnRulesAndNotNearLeviathan()`
+(confirmed via `javap -c` on the mod jar) - the night/rain/thunder-boosted
+probabilities (15/35/50) were left untouched since the ask was specifically
+about daytime encounters. Now tracked in `OVERRIDE_FILES` in both update
+scripts like the kubejs scripts, so it won't drift again.
+
 ## Food mod (Farmer's Delight + compat)
 
 - **Farmer's Delight** - new crops, cooking mechanics (cutting board, stove,

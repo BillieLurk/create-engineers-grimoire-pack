@@ -123,6 +123,7 @@ OVERRIDE_FILES=(
     "kubejs/server_scripts/chat_logger.js"
     "kubejs/server_scripts/night_ritual.js"
     "kubejs/server_scripts/calling_ritual.js"
+    "config/myths_of_the_sea-common.toml"
 )
 RAW_BASE="https://raw.githubusercontent.com/BillieLurk/create-engineers-grimoire-pack/main/overrides"
 for rel in "${OVERRIDE_FILES[@]}"; do
