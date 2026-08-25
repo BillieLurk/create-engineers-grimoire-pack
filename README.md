@@ -117,3 +117,81 @@ cd ~/Downloads
 rm -f Create-Engineers-Grimoire-Friend-Package.zip
 zip -r -j Create-Engineers-Grimoire-Friend-Package.zip Create-Engineers-Grimoire-Install/
 ```
+
+## God AI (in-progress endgame feature)
+
+An in-world oracle/DM feature: players write a question in a Book & Quill,
+place it in a shrine Lectern, and receive an answer written into a
+returned book, from "the god of the world" (an AI backed by the Anthropic
+API, using the modpack's own content as context — see
+`knowledge/modpack-lore.md`).
+
+**Status: groundwork only, not live yet.** Blocked on the user providing
+an Anthropic API key (kept out of this repo and out of any conversation
+transcript - written directly to
+`~/minecraft-server/create-engineers-grimoire/secrets/anthropic_api_key.txt`,
+chmod 600, never committed, never shipped to clients).
+
+**Security invariant: the API key must never reach players.** It lives
+only on the host, used only by a server-side watcher process that isn't
+part of the mod pack. No KubeJS script, no file in this repo, and nothing
+in the friend package may ever reference or transmit it.
+
+### Built so far
+
+- `knowledge/modpack-lore.md` - the full context document fed to the AI:
+  pack identity/tone instructions, a Dungeon-Master directive for
+  quest-giving, real quest hooks tied to actual pack content tiered by
+  progression, and a `## Player Knowledge` section populated per-request.
+- `scripts/player_tracker.js` - a KubeJS server script, ticks every 600
+  ticks (30s), dumps live state for every online player (position,
+  dimension, health/food/XP, held items, armor, game mode) to
+  `player_metrics_live.json` at the **server's root directory** (despite
+  the name, `KubeJSPaths.DATA` does not resolve to `kubejs/data/` in this
+  KubeJS build - verified empirically, not assumed).
+- `scripts/chat_logger.js` - a KubeJS server script (`PlayerEvents.chat`)
+  that appends every chat message to a rolling `chat_log.json` (also at
+  server root, capped at 500 entries) - a passive, zero-API-cost log.
+
+Both scripts hard-learned real KubeJS 2101 (MC 1.21.1) API quirks the hard
+way - useful if extending them:
+- Raw `java.*` and bare class names (e.g. `KubeJSPaths`) are **not** in
+  script scope. Use `Java.loadClass("fully.qualified.Name")` (not
+  `Java.type`, which doesn't exist in this build).
+- `server_scripts` files share one top-level scope - `const`/`let` at top
+  level in two different files collides. Use `var`, or scope things inside
+  functions.
+- Event names don't always match intuition:
+  `PlayerEvents.chat`, not `ServerEvents.chatMessage`. When unsure, don't
+  guess - `javap -p` the relevant class from the installed KubeJS jar
+  (`unzip` it to inspect) to get real method/event names, then test live
+  against the running server and read the actual log output.
+
+### Still to build (once the API key is provided)
+
+1. **Structure/quest-hook proximity**: use the server's own `/locate`
+   structure command (issued via the same console-access mechanism used
+   throughout this project) to tell the AI how far and which direction
+   the nearest strongholds/monuments/etc. are from the requesting player,
+   so quest-giving and "where am I" answers can reference real nearby
+   points of interest.
+2. **Chat batching for player profiles**: an external (non-KubeJS, runs
+   on the host) process that periodically (on a timer, NOT per-message)
+   reads `chat_log.json`, makes ONE summarization API call per batch to
+   extract/update per-player personality/interest notes, and merges them
+   into a persistent profile file - deliberately batched to keep API
+   usage and cost low, per explicit user instruction.
+3. **Prayer detection**: a KubeJS script watching the shrine Lectern(s)
+   for a newly-placed signed Written Book, extracting its text, applying
+   a per-player cooldown, and writing a pending-request file.
+4. **The watcher/bridge** (external, host-side, NOT KubeJS - KubeJS
+   scripts run on the server tick thread and must not make blocking
+   network calls): polls for pending requests, merges
+   `modpack-lore.md` + live player profile + nearby-structure data +
+   chat-derived personality notes into a prompt, calls the Anthropic API,
+   and uses the server console to hand the player back a written book
+   with the response.
+5. Player kill-count and advancement data should be pulled from vanilla's
+   own `world/stats/<uuid>.json` and `world/advancements/<uuid>.json`
+   (both plain JSON, maintained automatically - no KubeJS needed) and
+   merged into the same profile the watcher builds.
