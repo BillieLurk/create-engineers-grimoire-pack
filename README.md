@@ -69,10 +69,11 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
   ever renamed. It's `server: required, client: optional` since datapacks are
   server-side content; friends' clients downloading a copy under their own
   `.minecraft/world/` is harmless and inert (that's not a real save path).
-  **A newly-added datapack doesn't auto-enable** - after deploying, run
-  `/reload` then `/datapack enable "file/create_delightful_cooking_1.0.0.zip"`
-  in the server console (check the exact name first with
-  `/datapack list available`).
+  Verified via `/datapack list enabled` after a restart - it auto-enabled on
+  its own (`file/create_delightful_cooking_1.0.0.zip (world)`), no manual
+  `/datapack enable` needed. If a future world datapack doesn't show up
+  there, check `/datapack list available` first (it'll be listed disabled)
+  before assuming something's broken.
 
 ## Animation overhaul (mobs + player)
 
