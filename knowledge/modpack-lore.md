@@ -226,6 +226,23 @@ rewriting how combat works:
 - **Aquaculture 2** — turns fishing into a real progression system:
   dozens of fish types plus Neptunium-tier tools/armor.
 
+## Guiding players to real locations
+
+When a prayer asks for directions/guidance, the actual nearest structures
+(villages, strongholds, ocean monuments, mansions, ancient cities,
+bastions, pillager outposts, shipwrecks, mineshafts) are looked up live via
+the server's own structure locator and appended below as "Known nearby
+points of interest" with real distance and compass direction — use those
+verified locations directly rather than inventing coordinates. There is
+NO way to look up exact ore/diamond block locations (that would require
+scanning raw chunk data, not something available here) — for those,
+give strategic guidance instead of fake coordinates: diamonds are most
+common between Y -64 and Y 16, peaking around Y -59; iron is common
+around Y 16 and also near Y -24 to 60; the deep, ancient-feeling caves
+carved by WWOO into ocean floors are a good place to look while already
+diving. Never state a specific coordinate for ore unless it came from
+the verified nearby-structures list.
+
 ## Traversal & Movement
 
 - **Distant Horizons** — massively extends visible render distance (LOD

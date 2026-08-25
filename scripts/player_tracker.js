@@ -6,8 +6,11 @@
 // kill counts and achievements.
 
 const INTERVAL_TICKS = 600 // 30 seconds at 20 tps
+const MOB_SCAN_RADIUS = 32
 let tickCounter = 0
 var KubeJSPaths = Java.loadClass("dev.latvian.mods.kubejs.KubeJSPaths")
+var LivingEntityClass = Java.loadClass("net.minecraft.world.entity.LivingEntity")
+var AABBClass = Java.loadClass("net.minecraft.world.phys.AABB")
 
 function itemInfo(stack) {
     if (!stack || stack.isEmpty()) return null
@@ -15,6 +18,27 @@ function itemInfo(stack) {
         id: stack.getItem().toString(),
         name: stack.getHoverName().getString(),
         count: stack.getCount()
+    }
+}
+
+function nearbyMobCounts(player) {
+    try {
+        let r = MOB_SCAN_RADIUS
+        let box = new AABBClass(
+            player.getX() - r, player.getY() - r, player.getZ() - r,
+            player.getX() + r, player.getY() + r, player.getZ() + r
+        )
+        let list = player.level.getEntitiesOfClass(LivingEntityClass, box, e => e !== player)
+        let counts = {}
+        let n = list.size()
+        for (let i = 0; i < n; i++) {
+            let id = list.get(i).getType().toString()
+            counts[id] = (counts[id] || 0) + 1
+        }
+        return counts
+    } catch (e) {
+        console.log("player_tracker: nearby mob scan failed - " + e)
+        return {}
     }
 }
 
@@ -37,7 +61,7 @@ ServerEvents.tick(event => {
         players.push({
             name: player.getGameProfile().getName(),
             uuid: player.getStringUuid(),
-            dimension: player.level().dimension().location().toString(),
+            dimension: String(player.level.dimension),
             x: Math.round(player.getX()),
             y: Math.round(player.getY()),
             z: Math.round(player.getZ()),
@@ -48,7 +72,8 @@ ServerEvents.tick(event => {
             mainHand: itemInfo(player.getMainHandItem()),
             offHand: itemInfo(player.getOffhandItem()),
             armor: armor,
-            xpLevel: player.experienceLevel
+            xpLevel: player.experienceLevel,
+            nearbyMobs: nearbyMobCounts(player)
         })
     })
 

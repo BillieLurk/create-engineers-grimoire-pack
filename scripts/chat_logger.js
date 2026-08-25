@@ -16,7 +16,7 @@ const LOG_PATH = KubeJSPaths.DATA.resolve("chat_log.json")
 function loadLog() {
     if (!LOG_PATH.toFile().exists()) return []
     try {
-        let parsed = JsonIO.parse(JsonIO.readString(LOG_PATH))
+        let parsed = JSON.parse(String(JsonIO.readString(LOG_PATH)))
         return Array.isArray(parsed) ? parsed : []
     } catch (e) {
         console.log("chat_logger: failed to read existing log, starting fresh - " + e)
