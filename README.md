@@ -50,6 +50,30 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
   load event, changes to this file need a full server restart to take
   effect, not just `/reload`.
 
+## Food mod (Farmer's Delight + compat)
+
+- **Farmer's Delight** - new crops, cooking mechanics (cutting board, stove,
+  cooking pot), and dishes. Client+server required like any normal content
+  mod.
+- **Aquaculture Delight** - compat addon: lets Aquaculture 2 fish (and the
+  fillets from `fish_fillet_compat.js`, including the Critters and
+  Companions/Naturalist fish it adds) be used in Farmer's Delight cooking
+  pot/cutting board recipes, plus mutual knife compatibility between the two
+  mods.
+- **Create: Delightful Cooking** - a **datapack** (not a mod jar - listed as
+  `loaders: ["datapack"]` on Modrinth), so it can't just be dropped in
+  `mods/`. Shipped at `world/datapacks/create_delightful_cooking_1.0.0.zip`
+  in the manifest, which only actually works because the dedicated server's
+  world is named `world` (confirmed from its own log lines, e.g.
+  `ServerLevel[world]`) - this path assumption would break if the world were
+  ever renamed. It's `server: required, client: optional` since datapacks are
+  server-side content; friends' clients downloading a copy under their own
+  `.minecraft/world/` is harmless and inert (that's not a real save path).
+  **A newly-added datapack doesn't auto-enable** - after deploying, run
+  `/reload` then `/datapack enable "file/create_delightful_cooking_1.0.0.zip"`
+  in the server console (check the exact name first with
+  `/datapack list available`).
+
 ## Animation overhaul (mobs + player)
 
 Fresh Animations, its `+All_Extensions` pack, and its `+Player` extension

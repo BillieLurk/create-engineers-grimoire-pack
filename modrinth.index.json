@@ -3,7 +3,7 @@
   "game": "minecraft",
   "versionId": "1.0.0",
   "name": "Create Engineers' Grimoire",
-  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses.",
+  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses. Farmer's Delight for cooking/farming content, with Aquaculture Delight (fish/fillet compat - uses the fillets from the fish fillet compat script) and Create: Delightful Cooking (mechanized cooking pot/cutting board automation, delivered as a world datapack) for Create integration.",
   "files": [
     {
       "path": "mods/create-1.21.1-6.0.10.jar",
@@ -1245,11 +1245,56 @@
         "client": "required",
         "server": "unsupported"
       }
+    },
+    {
+      "path": "mods/FarmersDelight-1.21.1-1.3.3.jar",
+      "hashes": {
+        "sha1": "55ea87dec84a632690a748857db08a35941980b6",
+        "sha512": "57978eb985131dd25a0d098362b4c6eabf9c607d8048b1a639e231c4fcee53c1a05453cedfe6a4a52da4ab8bf4190cdb520a6c3097e8e0993cf7360ad693dc15"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/R2OftAxM/versions/wpkbWnVh/FarmersDelight-1.21.1-1.3.3.jar"
+      ],
+      "fileSize": 3160883,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/aquaculturedelight-1.2.0-neoforge-1.21.1.jar",
+      "hashes": {
+        "sha1": "111393c07a98f29cab1de0d91965cc1bc6d9d73f",
+        "sha512": "ef13ec67b0af25a94015d5dcd7a549b3a7759026cd3689923b107e92700f09cc0826f0c98d22fdeef37f2f8d5f1219f6d6edabb5f026b5fec9d347b5e1c23231"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/U9GJqWrI/versions/VFpyJiVp/aquaculturedelight-1.2.0-neoforge-1.21.1.jar"
+      ],
+      "fileSize": 213607,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "world/datapacks/create_delightful_cooking_1.0.0.zip",
+      "hashes": {
+        "sha1": "ab0e2e7ad25bad4e6dccb15105dbb6dc65dc430e",
+        "sha512": "4d9ac45654839b2a26562721e99744f2b964f7f45c3bbc2a9e0de75eef0ef4381c55baa2269a37458d6d272ad74f6ff7eddf3dfb4bc7687add2b1ec092c03ee5"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/YEU8vRs0/versions/JRWsXJej/create_delightful_cooking_1.0.0.zip"
+      ],
+      "fileSize": 26257,
+      "env": {
+        "client": "optional",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 5
+  "pack_version": 6
 }

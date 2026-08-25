@@ -245,6 +245,19 @@ rewriting how combat works:
   and other content mods don't register their fish with Aquaculture by
   default).
 
+## Cooking & Food
+
+- **Farmer's Delight** — new crops, a cutting board and cooking pot, and a
+  large set of proper cooked dishes beyond vanilla's raw/basic food items.
+- **Aquaculture Delight** — the compat layer between Farmer's Delight and
+  Aquaculture 2: Aquaculture's fish (and Fish Fillets, including the
+  Critters and Companions/Naturalist fish added by the fillet compat
+  script) can be used in Farmer's Delight recipes, and the two mods' knives
+  work interchangeably.
+- **Create: Delightful Cooking** — for players deep into Create automation:
+  lets Create machinery (mechanical mixers/etc.) automate Farmer's Delight
+  cooking pot recipes instead of doing it all by hand.
+
 ## Guiding players to real locations
 
 When a prayer asks for directions/guidance, the actual nearest structures
