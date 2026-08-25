@@ -292,7 +292,7 @@ def deliver_book(player_name, pages):
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION, command, "Enter"], check=True)
 
 
-CHUNK_CHARS = 26          # short enough to stay fully on-screen at normal GUI scale
+CHUNK_CHARS = 38          # short enough to stay fully on-screen at normal GUI scale
 CHUNK_STAY_SECONDS = 3.2  # how long each chunk stays fully visible before the next
 
 
@@ -327,18 +327,19 @@ def deliver_calling(request, answer):
     times_cmd = base + f"title {target} times 5 {int(CHUNK_STAY_SECONDS * 20) - 10} 5"
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION, times_cmd, "Enter"], check=True)
 
-    # A small persistent label in the subtitle slot, set once - the actual
-    # message goes in the title slot below since title text is always
-    # non-empty here, guaranteeing every chunk actually re-triggers the
-    # display (an empty title text was silently ignored by the client).
-    label_json = json.dumps({"text": "~ the oracle speaks ~", "color": "gray", "italic": True})
-    subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                    base + f"title {target} subtitle {label_json}", "Enter"], check=True)
+    # Title renders roughly 2x larger than subtitle, so the actual message
+    # goes in the (smaller) subtitle slot, which fits far more text on
+    # screen. Title is kept short and fixed, only there to force a fresh
+    # subtitle to actually redisplay each cycle - it must be non-empty,
+    # since an empty title string was silently ignored by the client.
+    header_json = json.dumps({"text": "✦", "color": "dark_purple", "bold": True})  # a small star glyph
 
     for chunk in chunks:
-        chunk_json = json.dumps({"text": chunk, "color": "dark_purple", "bold": True})
+        chunk_json = json.dumps({"text": chunk, "color": "white", "italic": True})
         subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                        base + f"title {target} title {chunk_json}", "Enter"], check=True)
+                        base + f"title {target} subtitle {chunk_json}", "Enter"], check=True)
+        subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
+                        base + f"title {target} title {header_json}", "Enter"], check=True)
         time.sleep(CHUNK_STAY_SECONDS)
 
 
