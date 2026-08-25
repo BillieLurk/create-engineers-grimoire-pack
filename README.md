@@ -53,14 +53,33 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
 ## Myths of the Sea tuning
 
 `overrides/config/myths_of_the_sea-common.toml` - another file that had
-drifted (live-edited on the server, never committed). Lowered
-`leviathanNormalSpawnProbability` from the mod's default of 7 to 1: this is
-specifically the "clear day, no rain, no thunder" spawn-roll probability
-(out of a 0-100 roll) in `LeviathanEntity.surfaceWaterSpawnRulesAndNotNearLeviathan()`
-(confirmed via `javap -c` on the mod jar) - the night/rain/thunder-boosted
-probabilities (15/35/50) were left untouched since the ask was specifically
-about daytime encounters. Now tracked in `OVERRIDE_FILES` in both update
-scripts like the kubejs scripts, so it won't drift again.
+drifted (live-edited on the server, never committed). Lowered all four
+Leviathan spawn probabilities from the mod's defaults: normal (clear
+day) 7 -> 1, night 15 -> 3, rain 35 -> 5, thunder 50 -> 8.
+
+**This config only covers HALF the story.** Myths of the Sea has two
+independent Leviathan spawn paths (found via `javap -c` on the mod jar):
+1. `LeviathanEntity.surfaceWaterSpawnRulesAndNotNearLeviathan()` - normal
+   vanilla-style natural placement. Reads the toml live, so the config
+   change above actually does something here.
+2. `LeviathanSpawner` (a `CustomSpawner`) - ticks independently every ~2-4
+   game ticks, rolling a spawn near a random online player, completely
+   separate from vanilla's normal spawn cycle. Its odds are **hardcoded in
+   the compiled jar** (night 1-in-50, rain 1-in-10, thunder 50/50 coinflip,
+   nothing on clear days) - no config read anywhere in this class, so the
+   toml has zero effect on it.
+
+Since path 2 can't be tuned via config, added
+`overrides/kubejs/server_scripts/leviathan_throttle.js`: a blanket
+`EntityEvents.spawned('myths_of_the_sea:leviathan', ...)` listener that
+`discard()`s ~80% of every Leviathan that spawns, regardless of which path
+produced it or what the weather/time was. This is the part that actually
+addresses path 2, since the toml can't touch it. Combined with the lowered
+toml values, this should meaningfully cut Leviathan encounters across every
+scenario, not just the daytime case from the first pass at this.
+
+Both files are tracked in `OVERRIDE_FILES` in both update scripts, so they
+won't drift again.
 
 ## Food mod (Farmer's Delight + compat)
 

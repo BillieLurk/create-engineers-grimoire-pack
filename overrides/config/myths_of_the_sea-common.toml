@@ -20,13 +20,13 @@
 		leviathanNormalSpawnProbability = 1
 		# Default: 15
 		# Range: > 0
-		leviathanNightSpawnProbability = 15
+		leviathanNightSpawnProbability = 3
 		# Default: 35
 		# Range: > 0
-		leviathanRainSpawnProbability = 35
+		leviathanRainSpawnProbability = 5
 		# Default: 50
 		# Range: > 0
-		leviathanThunderSpawnProbability = 50
+		leviathanThunderSpawnProbability = 8
 		#Modify how close to each other can leviathans spawn
 		# Default: 120
 		# Range: > 0
