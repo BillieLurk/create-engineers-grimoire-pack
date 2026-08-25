@@ -329,17 +329,18 @@ def deliver_calling(request, answer):
 
     # Title renders roughly 2x larger than subtitle, so the actual message
     # goes in the (smaller) subtitle slot, which fits far more text on
-    # screen. Title is kept short and fixed, only there to force a fresh
-    # subtitle to actually redisplay each cycle - it must be non-empty,
-    # since an empty title string was silently ignored by the client.
-    header_json = json.dumps({"text": "✦", "color": "dark_purple", "bold": True})  # a small star glyph
+    # screen. Per the documented vanilla pattern for subtitle-only display:
+    # send an EMPTY title first (this is what actually triggers a fresh
+    # redisplay), THEN set the subtitle text - the reverse order silently
+    # drops the subtitle after the first cycle.
+    empty_title = '{"text":""}'
 
     for chunk in chunks:
         chunk_json = json.dumps({"text": chunk, "color": "white", "italic": True})
         subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                        base + f"title {target} subtitle {chunk_json}", "Enter"], check=True)
+                        base + f"title {target} title {empty_title}", "Enter"], check=True)
         subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                        base + f"title {target} title {header_json}", "Enter"], check=True)
+                        base + f"title {target} subtitle {chunk_json}", "Enter"], check=True)
         time.sleep(CHUNK_STAY_SECONDS)
 
 
