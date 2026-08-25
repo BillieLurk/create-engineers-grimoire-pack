@@ -292,7 +292,7 @@ def deliver_book(player_name, pages):
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION, command, "Enter"], check=True)
 
 
-CHUNK_CHARS = 42          # short enough to read comfortably as a single title line
+CHUNK_CHARS = 26          # short enough to stay fully on-screen at normal GUI scale
 CHUNK_STAY_SECONDS = 3.2  # how long each chunk stays fully visible before the next
 
 
@@ -301,9 +301,12 @@ def chunk_for_display(text):
     chunks = []
     current = ""
     for word in words:
+        if len(word) > CHUNK_CHARS:
+            word = word[:CHUNK_CHARS]  # guard against one absurdly long word/typo
         candidate = (current + " " + word).strip()
         if len(candidate) > CHUNK_CHARS:
-            chunks.append(current)
+            if current:
+                chunks.append(current)
             current = word
         else:
             current = candidate
@@ -324,19 +327,18 @@ def deliver_calling(request, answer):
     times_cmd = base + f"title {target} times 5 {int(CHUNK_STAY_SECONDS * 20) - 10} 5"
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION, times_cmd, "Enter"], check=True)
 
-    header_json = json.dumps({"text": "THE ORACLE SPEAKS", "color": "dark_purple", "bold": True, "italic": True})
+    # A small persistent label in the subtitle slot, set once - the actual
+    # message goes in the title slot below since title text is always
+    # non-empty here, guaranteeing every chunk actually re-triggers the
+    # display (an empty title text was silently ignored by the client).
+    label_json = json.dumps({"text": "~ the oracle speaks ~", "color": "gray", "italic": True})
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                    base + f"title {target} title {header_json}", "Enter"], check=True)
-    time.sleep(CHUNK_STAY_SECONDS)
+                    base + f"title {target} subtitle {label_json}", "Enter"], check=True)
 
     for chunk in chunks:
-        chunk_json = json.dumps({"text": chunk, "color": "white", "italic": True})
+        chunk_json = json.dumps({"text": chunk, "color": "dark_purple", "bold": True})
         subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                        base + f"title {target} subtitle {chunk_json}", "Enter"], check=True)
-        # subtitle alone won't (re)appear without a title trigger on some
-        # clients, so re-send an empty title each time to force a refresh
-        subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                        base + f'title {target} title {{"text":""}}', "Enter"], check=True)
+                        base + f"title {target} title {chunk_json}", "Enter"], check=True)
         time.sleep(CHUNK_STAY_SECONDS)
 
 
