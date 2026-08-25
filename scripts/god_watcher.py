@@ -292,24 +292,52 @@ def deliver_book(player_name, pages):
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION, command, "Enter"], check=True)
 
 
-MAX_TITLE_CHARS = 100
+CHUNK_CHARS = 42          # short enough to read comfortably as a single title line
+CHUNK_STAY_SECONDS = 3.2  # how long each chunk stays fully visible before the next
+
+
+def chunk_for_display(text):
+    words = text.strip().split()
+    chunks = []
+    current = ""
+    for word in words:
+        candidate = (current + " " + word).strip()
+        if len(candidate) > CHUNK_CHARS:
+            chunks.append(current)
+            current = word
+        else:
+            current = candidate
+    if current:
+        chunks.append(current)
+    return chunks
 
 
 def deliver_calling(request, answer):
-    short = answer.strip().replace("\n", " ")
-    if len(short) > MAX_TITLE_CHARS:
-        short = short[:MAX_TITLE_CHARS - 1].rsplit(" ", 1)[0] + "..."
-
-    title_json = json.dumps({"text": "THE GOD SPEAKS", "color": "dark_purple", "bold": True})
-    subtitle_json = json.dumps({"text": short, "color": "white"})
+    chunks = chunk_for_display(answer)
     radius = request.get("radius", 64)
-
     base = (f'execute in {request["dimension"]} positioned {request["x"]} '
             f'{request["y"]} {request["z"]} run ')
+    target = f"@a[distance=..{radius}]"
+
+    # Slower fade so short chunks don't feel jarring; stay time matched to
+    # CHUNK_STAY_SECONDS below (in ticks: 20 per second).
+    times_cmd = base + f"title {target} times 5 {int(CHUNK_STAY_SECONDS * 20) - 10} 5"
+    subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION, times_cmd, "Enter"], check=True)
+
+    header_json = json.dumps({"text": "THE ORACLE SPEAKS", "color": "dark_purple", "bold": True, "italic": True})
     subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                    base + f'title @a[distance=..{radius}] title {title_json}', "Enter"], check=True)
-    subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
-                    base + f'title @a[distance=..{radius}] subtitle {subtitle_json}', "Enter"], check=True)
+                    base + f"title {target} title {header_json}", "Enter"], check=True)
+    time.sleep(CHUNK_STAY_SECONDS)
+
+    for chunk in chunks:
+        chunk_json = json.dumps({"text": chunk, "color": "white", "italic": True})
+        subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
+                        base + f"title {target} subtitle {chunk_json}", "Enter"], check=True)
+        # subtitle alone won't (re)appear without a title trigger on some
+        # clients, so re-send an empty title each time to force a refresh
+        subprocess.run(["tmux", "send-keys", "-t", TMUX_SESSION,
+                        base + f'title {target} title {{"text":""}}', "Enter"], check=True)
+        time.sleep(CHUNK_STAY_SECONDS)
 
 
 def process_request(api_key, knowledge, path):
@@ -323,9 +351,11 @@ def process_request(api_key, knowledge, path):
     system_prompt = knowledge + "\n\n" + player_context
     if is_calling:
         system_prompt += ("\n\nThis is a public 'Calling' ritual - your answer will be shown as "
-                          "on-screen title text to everyone nearby, not written into a book. "
-                          f"Answer in ONE short, vivid, direct sentence, under {MAX_TITLE_CHARS} "
-                          "characters. No lists, no lengthy explanation - just the guidance itself.")
+                          "on-screen text to everyone nearby, revealed a few words at a time in "
+                          "sequence (not written into a book). Answer in 2-4 short sentences, "
+                          "still in full oracle voice - no lists, no headers, no lengthy asides. "
+                          "Every sentence should stand on its own since it will be read as a "
+                          "short burst of text before the next one appears.")
 
     try:
         answer = call_openai(api_key, system_prompt, request["question"])
