@@ -3,7 +3,7 @@
   "game": "minecraft",
   "versionId": "1.0.0",
   "name": "Create Engineers' Grimoire",
-  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob animations/models. Mowzie's Mobs for atmospheric Overworld bosses.",
+  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses.",
   "files": [
     {
       "path": "mods/create-1.21.1-6.0.10.jar",
@@ -1200,11 +1200,56 @@
         "https://cdn.modrinth.com/data/BFbX9xcm/versions/xgAXTl17/mowziesmobs-1.21.1-1.8.2.jar"
       ],
       "fileSize": 36042925
+    },
+    {
+      "path": "mods/entity_model_features-3.2.4-1.21-neoforge.jar",
+      "hashes": {
+        "sha1": "fcc0d7cfee5ace4dba159225edd151d90dd924b9",
+        "sha512": "840866c0b5168b04713652cf31d8a8bc6ed47d9748a78e0e9f07d201e03d2a276f0edfe727a8bffebe7396595876499d8d4f420fc2ff2e71fbc45128ca6c4e11"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/4I1XuqiY/versions/PAYgk63v/entity_model_features-3.2.4-1.21-neoforge.jar"
+      ],
+      "fileSize": 567827,
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      }
+    },
+    {
+      "path": "mods/entity_texture_features_1.21-neoforge-7.1.jar",
+      "hashes": {
+        "sha1": "56de40b237ff44dbf1bb68844e0f118607902684",
+        "sha512": "fc4b6a75ad57defb944d188fac78e45a33342a2c2a2b0e673c81ac370df09335d4371c8e10bea8f593da4b1f1c2fcc361c124b274ee4b3c2ae75571f00742059"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/BVzZfTc1/versions/YEMROAHv/entity_texture_features_1.21-neoforge-7.1.jar"
+      ],
+      "fileSize": 752334,
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      }
+    },
+    {
+      "path": "mods/notenoughanimations-neoforge-1.12.4-mc1.21.1.jar",
+      "hashes": {
+        "sha1": "b509863deaa27890f8db600f612966a07490a6cd",
+        "sha512": "9d929cf8e0a0ff2c806e007571b10cd9b81cd508826519f55e25f0390149109c7c12605143e4c11b5b5fac749e69de532c1ad00aa6a257e4dd0d3a3a77f2461b"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/MPCX6s5C/versions/eYNogep3/notenoughanimations-neoforge-1.12.4-mc1.21.1.jar"
+      ],
+      "fileSize": 1939625,
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 4
+  "pack_version": 5
 }

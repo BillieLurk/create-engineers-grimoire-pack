@@ -30,6 +30,45 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
   underwater ruins, bastions, end cities, ancient cities, mansions), tiered
   by structure risk. See the file itself for the full breakdown and why each
   tier's regex targets both vanilla and overhaul-mod loot table namespaces.
+- `overrides/kubejs/server_scripts/fish_fillet_compat.js` - registers fish
+  items from Critters and Companions (`koi_fish`) and Naturalist (`bass`,
+  `catfish`, `anglerfish`, `blobfish`) with Aquaculture 2's knife-fillet
+  recipe. **This is not data/tag driven** - Aquaculture's
+  `crafting_special_fish_fillet` recipe is a hardcoded Java `CustomRecipe`
+  that only checks item membership in a static Java registry,
+  `AquacultureAPI.FISH_DATA` (confirmed via `javap -c` on
+  `FishFilletRecipe.class` and `FishWeightHandler.class` in the Aquaculture
+  jar - there is no tag or JSON recipe path for this at all). The script
+  calls `AquacultureAPI.FISH_DATA.add(item, minWeight, maxWeight,
+  filletAmount)` directly via `Java.loadClass`, with weight/fillet numbers
+  chosen to match the scale of Aquaculture's own fish (reference table is
+  in `FishWeightHandler.registerFishData()` inside the jar). It must run
+  from `ServerEvents.loaded` in a `server_scripts` file, **not**
+  `startup_scripts`, because `AquacultureAPI.FISH_DATA` isn't populated
+  until Aquaculture's own `FMLCommonSetupEvent` handler runs - calling it
+  from `startup_scripts` risks a null field. Because it hooks a one-time
+  load event, changes to this file need a full server restart to take
+  effect, not just `/reload`.
+
+## Animation overhaul (mobs + player)
+
+Fresh Animations, its `+All_Extensions` pack, and its `+Player` extension
+were already in the pack (`overrides/resourcepacks/`), but they are pure
+resource packs - by themselves they only reskin/retexture the existing
+vanilla model shape. Their custom animated geometry (extra bones for tails,
+wings, jaws, etc. beyond what a vanilla model has) requires **Entity Model
+Features (EMF)** to interpret at all, and EMF itself requires **Entity
+Texture Features (ETF)** - confirmed directly from Fresh Animations' and
+FA+Player's own project pages ("OptiFine or EMF Required" /
+"requires both Entity Model and Entity Texture Features (EMF & ETF)").
+Neither was in the pack, meaning the resource packs were silently doing far
+less than intended (vanilla-shaped models only, no extra animation rigging).
+Added both as client-only mods to fix this.
+
+On top of that, added **Not Enough Animations** for the player character
+specifically - unlike a resource pack, it's an actual animation mod that
+adds new player poses (crawling, ladder/vine climbing, sneaking sway,
+swimming) rather than just reshaping the existing ones.
 
 ## Deployment locations (this machine)
 
@@ -46,8 +85,10 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
 Every file entry in `modrinth.index.json` has an `env` field (standard
 `.mrpack` spec) marking `client`/`server` as `required` or `unsupported`.
 Currently server-unsupported: Iris, Iris & Oculus Flywheel Compat, Mouse
-Tweaks, Sodium, and all three shaderpacks. This is what both the manual
-deploy process and the auto-update scripts use to decide what goes where.
+Tweaks, Sodium, all three shaderpacks, Entity Model Features (EMF), Entity
+Texture Features (ETF), and Not Enough Animations. This is what both the
+manual deploy process and the auto-update scripts use to decide what goes
+where.
 
 ## Auto-update system (GitHub-hosted, not a mod)
 

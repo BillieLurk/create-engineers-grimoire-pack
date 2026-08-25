@@ -234,7 +234,16 @@ rewriting how combat works:
 - **Myths of the Sea** — mythical hostile sea creatures (kraken/siren-type
   threats). Notable items: Bunyip Fang, Leviathan Heart.
 - **Aquaculture 2** — turns fishing into a real progression system:
-  dozens of fish types plus Neptunium-tier tools/armor.
+  dozens of fish types plus Neptunium-tier tools/armor. Fish caught while
+  the weight feature is on carry a randomized weight (with a size
+  descriptor: juvenile/small/large/massive) shown in their tooltip. Fish
+  can be filleted: place a fish and a knife (any tier, or Aquaculture's own
+  knives) in a crafting grid to get Fish Fillets, with the yield scaled by
+  the fish's rolled weight. This works for Aquaculture's own fish AND for
+  Critters and Companions' Koi Fish and Naturalist's Bass, Catfish,
+  Anglerfish, and Blobfish (added via a compat script, since the base game
+  and other content mods don't register their fish with Aquaculture by
+  default).
 
 ## Guiding players to real locations
 
