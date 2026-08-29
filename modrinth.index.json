@@ -3,7 +3,7 @@
   "game": "minecraft",
   "versionId": "1.0.0",
   "name": "Create Engineers' Grimoire",
-  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses. Farmer's Delight for cooking/farming content, with Aquaculture Delight (fish/fillet compat - uses the fillets from the fish fillet compat script) and Create: Delightful Cooking (mechanized cooking pot/cutting board automation, delivered as a world datapack) for Create integration. Traveler's Backpack for portable storage, Storage Drawers for simple bulk item storage. Nemo's Inventory Sorting for one-click inventory sorting.",
+  "summary": "Full Create mod family, Ars Nouveau + Ars Creo integration, Biomes O' Plenty world overhaul, and YUNG's Better Dungeons. MC 1.21.1 / NeoForge. Light QoL: Jade, AppleSkin, Xaero's Minimap, Mouse Tweaks, Clumps. Exploration incentives: Distant Horizons, YUNG's Better Strongholds, YUNG's Better Ocean Monuments, Repurposed Structures. Hard-mode content: L_Ender's Cataclysm and Deeper and Darker. Ember's Floating Islands for explorable sky structures. Plus Create: Diesel Generators, Create: Framed, Ars Additions, Ars Controle. Deep sea overhaul: Aquamirae, Create Deep Seas (submarine), Myths of the Sea, Hopo Better Underwater Ruins, Aquaculture 2. Shaders: Iris + Sodium + Flywheel compat, with Complementary Reimagined, BSL, and Rethinking Voxels pre-installed. Nether/End overhauls: Incendium, Nullscape, YUNG's Better Nether Fortresses. Ambient wildlife: Naturalist, Critters and Companions, Vanilla Fireflies. Rhino/KubeJS/LootJS with a custom script injecting mod loot into vanilla structure chests. Unique Curios treasures: Artifacts and Relics. Create Grappling Hooks for traversal/caving. WWOO for real depth/terrain variety in vanilla ocean biomes. Chunky for chunk pregeneration. Cult of Azazel for a Nether mansion structure. Create: Bionics for robot animals. Fresh Animations (+ Extensions, Player Extension) for improved mob/player animations and models, backed by Entity Model Features + Entity Texture Features (required for FA's custom geometry to actually render), plus Not Enough Animations for extra player poses (crawling, climbing, sitting, sneaking sway). Mowzie's Mobs for atmospheric Overworld bosses. Farmer's Delight for cooking/farming content, with Aquaculture Delight (fish/fillet compat - uses the fillets from the fish fillet compat script) and Create: Delightful Cooking (mechanized cooking pot/cutting board automation, delivered as a world datapack) for Create integration. Traveler's Backpack for portable storage, Storage Drawers for simple bulk item storage. Nemo's Inventory Sorting for one-click inventory sorting. Ars Sable (Ars Nouveau x Sable physics compat) and Reliquified Ars Nouveau (Ars Nouveau x Relics compat).",
   "files": [
     {
       "path": "mods/create-1.21.1-6.0.10.jar",
@@ -1335,11 +1335,41 @@
         "client": "required",
         "server": "unsupported"
       }
+    },
+    {
+      "path": "mods/ars_sable-1.21.1-1.1.2.jar",
+      "hashes": {
+        "sha1": "df43ad58fb9ca3b7acf7f62dc97ed75fd6da3da8",
+        "sha512": "8696cadb2ab45e14f23510a6c6837d063b1d9b6b1beb4a57f8840fe7133335df1406bccf588187e89d1098e092f3b4e31561982edad96a25c4b8cb70c8fcc178"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/gmQUWgeV/versions/zGMfKGIU/ars_sable-1.21.1-1.1.2.jar"
+      ],
+      "fileSize": 123395,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/reliquified_ars_nouveau-1.21.1-0.8.1.jar",
+      "hashes": {
+        "sha1": "4be1f4b0fd7fbec6618596e2e7c3705db88a7579",
+        "sha512": "5010ac4948c6868899d2da2dd9af9e447ccfc0bd7b6103a03e6d9ea555ad315bfd0927a2430dc2c6639980111e7ea0941aaef4520985f6068feb431900810a3a"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/qNOCEdeg/versions/xtS9iqts/reliquified_ars_nouveau-1.21.1-0.8.1.jar"
+      ],
+      "fileSize": 1183912,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 11
+  "pack_version": 12
 }
