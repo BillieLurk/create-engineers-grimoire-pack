@@ -681,21 +681,6 @@
       }
     },
     {
-      "path": "mods/MOTS-NeoForge-1.21.1-1.3.0.jar",
-      "hashes": {
-        "sha1": "abba421e416e36e1439baae292ca441823ca9667",
-        "sha512": "187de06f78e0bc3d8365201341577177620ae389248eec841e2d5444fb25e2aeba04a1c1cda7d3422a000465ab5cb5af44c0b66c667f240764aabcf722cf64ad"
-      },
-      "downloads": [
-        "https://cdn.modrinth.com/data/WaCchT6K/versions/veASg7rX/MOTS-NeoForge-1.21.1-1.3.0.jar"
-      ],
-      "fileSize": 8387535,
-      "env": {
-        "client": "required",
-        "server": "required"
-      }
-    },
-    {
       "path": "mods/HopoBetterUnderwaterRuins-[1.21.1-1.21.3]-1.2.1b.jar",
       "hashes": {
         "sha1": "1e033af9a73d11f68af304d1a46821c0118a70ca",
@@ -1476,5 +1461,5 @@
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 14
+  "pack_version": 15
 }

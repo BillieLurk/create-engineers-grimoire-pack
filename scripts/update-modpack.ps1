@@ -110,8 +110,6 @@ $overrideFiles = @(
     "kubejs/server_scripts/chat_logger.js",
     "kubejs/server_scripts/night_ritual.js",
     "kubejs/server_scripts/calling_ritual.js",
-    "kubejs/server_scripts/leviathan_throttle.js",
-    "config/myths_of_the_sea-common.toml",
     "config/aquaculture-common.toml"
 )
 $rawBase = "https://raw.githubusercontent.com/BillieLurk/create-engineers-grimoire-pack/main/overrides"

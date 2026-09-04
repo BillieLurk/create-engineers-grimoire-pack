@@ -50,36 +50,22 @@ zip -r -X ../Create-Engineers-Grimoire.mrpack modrinth.index.json overrides
   load event, changes to this file need a full server restart to take
   effect, not just `/reload`.
 
-## Myths of the Sea tuning
+## Myths of the Sea - removed
 
-`overrides/config/myths_of_the_sea-common.toml` - another file that had
-drifted (live-edited on the server, never committed). Lowered all four
-Leviathan spawn probabilities from the mod's defaults: normal (clear
-day) 7 -> 1, night 15 -> 3, rain 35 -> 5, thunder 50 -> 8.
+Was in the pack for a while (Leviathan/Kraken/Bake Kujira ambient sea
+threats), with a fair amount of effort put into taming its Leviathan spawn
+rate - two independent spawn paths, one config-driven and one hardcoded in
+the compiled jar, needed both a `myths_of_the_sea-common.toml` tuning pass
+and a KubeJS `EntityEvents.spawned` listener discarding ~80% of spawns to
+get it under control. Removed entirely after continuing to cause problems;
+both of those tuning files (`overrides/config/myths_of_the_sea-common.toml`
+and `overrides/kubejs/server_scripts/leviathan_throttle.js`) were deleted
+along with it and are no longer tracked in `OVERRIDE_FILES`.
 
-**This config only covers HALF the story.** Myths of the Sea has two
-independent Leviathan spawn paths (found via `javap -c` on the mod jar):
-1. `LeviathanEntity.surfaceWaterSpawnRulesAndNotNearLeviathan()` - normal
-   vanilla-style natural placement. Reads the toml live, so the config
-   change above actually does something here.
-2. `LeviathanSpawner` (a `CustomSpawner`) - ticks independently every ~2-4
-   game ticks, rolling a spawn near a random online player, completely
-   separate from vanilla's normal spawn cycle. Its odds are **hardcoded in
-   the compiled jar** (night 1-in-50, rain 1-in-10, thunder 50/50 coinflip,
-   nothing on clear days) - no config read anywhere in this class, so the
-   toml has zero effect on it.
-
-Since path 2 can't be tuned via config, added
-`overrides/kubejs/server_scripts/leviathan_throttle.js`: a blanket
-`EntityEvents.spawned('myths_of_the_sea:leviathan', ...)` listener that
-`discard()`s ~80% of every Leviathan that spawns, regardless of which path
-produced it or what the weather/time was. This is the part that actually
-addresses path 2, since the toml can't touch it. Combined with the lowered
-toml values, this should meaningfully cut Leviathan encounters across every
-scenario, not just the daytime case from the first pass at this.
-
-Both files are tracked in `OVERRIDE_FILES` in both update scripts, so they
-won't drift again.
+Note: players with existing Leviathan Heart/Kraken Tentacle/Bunyip Claw/etc.
+items already in inventories or chests will see them turn into a "missing
+mod" placeholder once this update lands - that's expected fallout from
+removing a content mod with items already in the world, not a bug.
 
 ## Food mod (Farmer's Delight + compat)
 
