@@ -44,7 +44,6 @@ LootJS.modifiers(event => {
         .addLoot(LootEntry.of('aquaculture:neptunium_ingot', [1, 2]).withWeight(6).when(c => c.randomChance(0.25)))
         .addLoot(LootEntry.of('aquamirae:abyssal_amethyst', [1, 2]).withWeight(5).when(c => c.randomChance(0.2)))
         .addLoot(LootEntry.of('aquamirae:angler_fang', 1).withWeight(3).when(c => c.randomChance(0.12)))
-        .addLoot(LootEntry.of('myths_of_the_sea:bunyip_fang', 1).withWeight(2).when(c => c.randomChance(0.08)))
         .addLoot(LootEntry.of('create:copper_diving_helmet', 1).withWeight(2).when(c => c.randomChance(0.06)))
         .addLoot(LootEntry.of('create:copper_diving_boots', 1).withWeight(2).when(c => c.randomChance(0.06)))
 
@@ -61,7 +60,6 @@ LootJS.modifiers(event => {
         .addLoot(LootEntry.of('ars_additions:advanced_dominion_wand', 1).withWeight(1).when(c => c.randomChance(0.04)))
         .addLoot(LootEntry.of('aquamirae:terrible_fang', 1).withWeight(2).when(c => c.randomChance(0.06)))
         .addLoot(LootEntry.of('aquamirae:shatterblade', 1).withWeight(1).when(c => c.randomChance(0.04)))
-        .addLoot(LootEntry.of('myths_of_the_sea:leviathan_heart', 1).withWeight(1).when(c => c.randomChance(0.04)))
         .addLoot(LootEntry.of('createbigcannons:nethersteel_ingot', [1, 2]).withWeight(3).when(c => c.randomChance(0.1)))
         .addLoot(LootEntry.of('create:netherite_diving_helmet', 1).withWeight(1).when(c => c.randomChance(0.04)))
         .addLoot(LootEntry.of('create:netherite_diving_boots', 1).withWeight(1).when(c => c.randomChance(0.04)))
