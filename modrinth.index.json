@@ -1575,11 +1575,251 @@
         "client": "required",
         "server": "required"
       }
+    },
+    {
+      "path": "mods/aeroworks-1.5.0.jar",
+      "hashes": {
+        "sha1": "0dffcd74781e2f7d0495c4aad1165eb3473476ec",
+        "sha512": "d79435aaf9c8d8697d1cb5a95b2189ab00ac1387dcbcdc0fbd701a25a22678eba2107e55b8da47bf0089282280ee2b3ff36418d9d7bda744b210d5fa5f4ca697"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/P26k79kP/versions/6kk7ruR3/aeroworks-1.5.0.jar"
+      ],
+      "fileSize": 790152,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/ballastmod-0.1.1.jar",
+      "hashes": {
+        "sha1": "dc7a83667104c1307e40de01468f0deb6702b400",
+        "sha512": "9b1aede6db9667d96f04efe0ee443d74fc56f7b1d336c73ee3d894bc31e850aae30ea816083e131e00a3be8690e99a7567bf36defed83d6772faf8c63bf18acb"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/5ypXYrfG/versions/XzlV3NlT/ballastmod-0.1.1.jar"
+      ],
+      "fileSize": 30381,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/sablephysicscompat-1.3.0.jar",
+      "hashes": {
+        "sha1": "ca5753e923c501acf43ff0d2fcf09f32240504c3",
+        "sha512": "8da8791d255aeae21ecc201318b2c670e594984fa0ce726bfce8a4f27e8983c50c7152e93cf68a389b7d06711e85bcfef925eea0a00a39dd6718db89326ec494"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/sZbcIrJb/versions/Ucq7afTi/sablephysicscompat-1.3.0.jar"
+      ],
+      "fileSize": 25334,
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/sablejade-1.3.0.jar",
+      "hashes": {
+        "sha1": "beb78d81a4d5768780c8566fa869ced5dbe08263",
+        "sha512": "20a0b808b5e1ea0e7251bd9ac5161bd96cf504b054f27f85343980956980210be6b364e8d6cbadbde9a6588550afd24e66ee5f17480839998772dc9de719ad64"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/jCrJ4iGH/versions/cxUohR7A/sablejade-1.3.0.jar"
+      ],
+      "fileSize": 301532,
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      }
+    },
+    {
+      "path": "mods/SSRD-1.8.7-1.21.1.jar",
+      "hashes": {
+        "sha1": "7da02fc5f783bedb55a29268e4c8ba7b0c3c9e6f",
+        "sha512": "fb09bb6799f2f9d8b051bc87920a49ee68319c358d0d23be5beaea444542be8336a52f71b57f81e8871df274fe2e1310121b90a3aded615421e84bcd6dfbae47"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/fJ183v3D/versions/iZflRKdV/SSRD-1.8.7-1.21.1.jar"
+      ],
+      "fileSize": 74407,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/createpropulsion-1.1.5.jar",
+      "hashes": {
+        "sha1": "928e9428ee92d07426c296b04a7fffb1e737e290",
+        "sha512": "6096c9c5cb220219a0b58b56f9fefd63f8b79a0967d326727b4206d62df1813da73956aeae2fa5b839160a1bb5af8e099726d12d2d93f10e5f157beb85bb9c52"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ApkoHNO9/versions/H13U56dc/createpropulsion-1.1.5.jar"
+      ],
+      "fileSize": 1707765,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/copycats-3.0.9+mc.1.21.1-neoforge.jar",
+      "hashes": {
+        "sha1": "74de17876c43f5f780bac478b9f9eb11e687b8d7",
+        "sha512": "432b5cde473976476b0729172710d32805576d0c3a5fd66d21f882d96cef0c4eef1b85e4e3a1a316e2adc473784b11e156b0265b0f62bcfd5b035a6ff7dfcc6e"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar"
+      ],
+      "fileSize": 1799381,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/createbetterfps-1.21.1-1.1.5.jar",
+      "hashes": {
+        "sha1": "c06111569e30af58d1cec4b4ee4b545f0021172a",
+        "sha512": "d98deec79eefb8e0c8ddda7def8a46f4c66402a213da5242f8ff029f43b844e68914fa31af3c8aed646d131ee9bfac3a63032df399b1f76cc99b5c312f32df24"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/lMYIHZNH/versions/dxmPYimo/createbetterfps-1.21.1-1.1.5.jar"
+      ],
+      "fileSize": 26542,
+      "env": {
+        "client": "required",
+        "server": "unsupported"
+      }
+    },
+    {
+      "path": "mods/createliquidfuel-3.0.0-1.21.1.jar",
+      "hashes": {
+        "sha1": "c061215a48f76d909675894aab165f1261267ab2",
+        "sha512": "3925e0f7e7b883d719c12c2cdd409fa954fbd53cbb63295764fdf06d57f63553b5dd99f94ae69b071a2aa17fb5bff53817e3394191d8933f7916220861e1bc76"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/sH9tXU9f/versions/rLn2bDVE/createliquidfuel-3.0.0-1.21.1.jar"
+      ],
+      "fileSize": 21815,
+      "env": {
+        "client": "unsupported",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/sliceanddice-4.3.4-neoforge.jar",
+      "hashes": {
+        "sha1": "bfcb12d13465caf6743f200fbd755b72705011e4",
+        "sha512": "18fc9c70d2958ad6a0e7106ca2a5659d664fe9d5001a02afbd0c7d6980749764fcd90203abb2b9c6d7b1c8e564e421be04dfca1aeb25974371d7deeabf4b96a3"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/GmjmRQ0A/versions/D6mQaFRW/sliceanddice-4.3.4-neoforge.jar"
+      ],
+      "fileSize": 1356389,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/kotlinforforge-5.12.0-all.jar",
+      "hashes": {
+        "sha1": "d10d062caf1aad9aec82d7852f2fee1781735c1f",
+        "sha512": "b8c3942f4d33179edf3f102f3d870b99dd436f8b8236dbbd31aa51b888162c692cfd88927295f24dc8b4375232f4c6c17360c5d6c4823f93cbcd7cf4bdc8bd14"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ordsPcFz/versions/uhJhCT7X/kotlinforforge-5.12.0-all.jar"
+      ],
+      "fileSize": 7279264,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/create-central-kitchen-2.6.2.jar",
+      "hashes": {
+        "sha1": "fc25056911ed744f4f7f762f4939d9805aa9f340",
+        "sha512": "187d8d86217825e5812a112b7922603af498427f7a4ba1c71cf5c651d12e7ef2ca046597d72743f61ebd497c82e7f1c79e28c853cd643d1d680093e086354f7f"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/btq68HMO/versions/whbguqT1/create-central-kitchen-2.6.2.jar"
+      ],
+      "fileSize": 511685,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/hearthandharvest-1.21.1-1.3.4.jar",
+      "hashes": {
+        "sha1": "73d08be2ccccb38a74c7c684338e860f63e47792",
+        "sha512": "1e2ca4d1d0d93dcd372aaeb5bf180ca615fdecf9e5f6d5367aafb59893490c9c2c13dca1f71b04deb5ec6e7a524fdd801ff7440997162833c6d2ff7d0d30fa40"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/8EEEXOzj/versions/7nTyt27O/hearthandharvest-1.21.1-1.3.4.jar"
+      ],
+      "fileSize": 2293602,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/culturaldelights-1.21.1-0.18.1.jar",
+      "hashes": {
+        "sha1": "0be069977520f620e9ff771399430e79b51c3640",
+        "sha512": "dd6c3885df4405ab958a3b7f2f4d593f31dc0386051f180a231da298d7963d5a989f903886b66b485fa99760f81bc60c00c098bddae6e3a218c635e1b422d965"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/YttyNOFA/versions/jL5hP1qm/culturaldelights-1.21.1-0.18.1.jar"
+      ],
+      "fileSize": 486801,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/rusticdelight-neoforge-1.21-1.7.1.jar",
+      "hashes": {
+        "sha1": "697df889af0cec1823cf5330fca62bf7f6e5037f",
+        "sha512": "1aa22e862f0775699782ee20aa5cf75ce528404711cf8587cb7a732c710aa76f4d14035d2cdd0ed92980eb5f9388765b7f17a5aa31bdeadb85382aad488a6d2a"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/foa4fGIH/versions/sAaG4pSA/rusticdelight-neoforge-1.21-1.7.1.jar"
+      ],
+      "fileSize": 1031957,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/festive_delight-2.0.0-neoforge-1.21.1.jar",
+      "hashes": {
+        "sha1": "e440a1fe3df842fc198d9ef68f31275d0115d433",
+        "sha512": "9d582dee0039659b65160e2aa7a7426e85e9816ff7c6587662f7a6b47549f35301418a88cf6feef0a8de165c8cde4c5df30006d33fa6c823cb608b3420054fd2"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/AsUUCoXX/versions/FP8ZwEus/festive_delight-2.0.0-neoforge-1.21.1.jar"
+      ],
+      "fileSize": 263872,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 16
+  "pack_version": 17
 }
