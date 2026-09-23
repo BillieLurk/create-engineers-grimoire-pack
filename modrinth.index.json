@@ -1815,11 +1815,131 @@
         "client": "required",
         "server": "required"
       }
+    },
+    {
+      "path": "mods/powergrid-mc1.21.1-0.6.2.jar",
+      "hashes": {
+        "sha1": "e09452dac8202e31f282149d45c49dcdb218bd54",
+        "sha512": "60307e23a27526d22bf753d387edef5a2f2a063a04a47b69e98b7f71bbad32fdf17e05f9838008e47a5999a60e5e77a91f0695215d0ab57694f0034fde9873ca"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/eWiBLJ9R/versions/jCkPHjmP/powergrid-mc1.21.1-0.6.2.jar"
+      ],
+      "fileSize": 5738480,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/createsifter-1.21.1-2.3.0.jar",
+      "hashes": {
+        "sha1": "4cd4866a74e7da5b5d4a84ec5757ceeb17cf80f1",
+        "sha512": "45dc85de21ae015e9dbaa151972e7ee114e2135b667e58a33bde5ce48821b0bb03965b79fb4a9ca1a494ac6f16f45a0a47031b4c1a44d86eb1250e73fb290e77"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/r018adCw/versions/Z5bTlA6P/createsifter-1.21.1-2.3.0.jar"
+      ],
+      "fileSize": 709755,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/Create-Structures-Arise-1.21.1-NeoForge-176.49.49.jar",
+      "hashes": {
+        "sha1": "05d47e5f723456ebe2058f39dd6baab1f9516f87",
+        "sha512": "e5864441b5f7ab76841057b269afd52327682aa35119c1346adab02b890b43664b5ffe13519c7f36d2e831b7b3d4d9df4ac9e8032250d704f54faadf957f973b"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/9enMEvoc/versions/bSLlGvYn/Create-Structures-Arise-1.21.1-NeoForge-176.49.49.jar"
+      ],
+      "fileSize": 1843340,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/create_ltab-4.1.0.jar",
+      "hashes": {
+        "sha1": "c5725961ba8585693a84cf06becb21e8f4b13f11",
+        "sha512": "05d2c6df728fbfe8d3522ffd88be492be5dfa6f06c806dc1f6d948afff39455f695add1edbb38fee2ed7f197668d13b5d72909bc60192c40d94df3ff0048d138"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/fUa6OtBG/versions/dQQazoxf/create_ltab-4.1.0.jar"
+      ],
+      "fileSize": 2894822,
+      "env": {
+        "client": "optional",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/create_mechanical_spawner-1.21.1-1.3.2-6.0.10.jar",
+      "hashes": {
+        "sha1": "d9a5a2ee44238e4a90f70057ba9ec8414594fe24",
+        "sha512": "d7ec9b66a9461258bdfcf739bf46c151c78d8dbee2c8b839b14294af5d22b5e7cc39649b435440bc200ca87c863aa188c76e17d45d062818a0e55270d3e6f30c"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/T1hmeGi9/versions/k7Fepzl4/create_mechanical_spawner-1.21.1-1.3.2-6.0.10.jar"
+      ],
+      "fileSize": 1215649,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/create_hypertube-0.6.0-NEOFORGE.jar",
+      "hashes": {
+        "sha1": "8004b4b3959364609906ea4d7bf409add879a222",
+        "sha512": "8405fb7f8bf7fff5811c29e8ed14acdea45ddc9487caec2c24ed5e7db4141b60e41b7a937645330180c74226bbb6b30359130e23929d53db1367be75c00585a9"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar"
+      ],
+      "fileSize": 546142,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/Create Components and Additions 2.3.jar",
+      "hashes": {
+        "sha1": "70ae0f497c282a5a2392596004be9afd1c25297d",
+        "sha512": "1f49614244f07653797f43a4b78b23954bafafa07a01255490504a8a942a14a21f6961ed2afa7836e31c5624b215fd8eacaa3b9ada5aa9955ffeb6c5ba2f91cd"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/exLPXAoq/versions/6SvDFvET/Create%20Components%20and%20Additions%202.3.jar"
+      ],
+      "fileSize": 1124993,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
+    },
+    {
+      "path": "mods/CreateNumismatics-1.1.0+neoforge-mc1.21.1.jar",
+      "hashes": {
+        "sha1": "5cd4817442ae95f886a2d31534166e9883ed4bb2",
+        "sha512": "f0a8e65828f4a36c500f4f2cad99dce89f4899711f3ebe4b8a691bf26a8be9ac8f83386507f87aaead712ab8c5f8a847cd06befb1927cb1f81de95f6cb6b7754"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/Jdbbtt0i/versions/kVi3TESX/CreateNumismatics-1.1.0%2Bneoforge-mc1.21.1.jar"
+      ],
+      "fileSize": 1894517,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 17
+  "pack_version": 18
 }
