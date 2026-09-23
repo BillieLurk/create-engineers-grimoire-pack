@@ -12,15 +12,15 @@
 # Prism pre-launch command automatically. Nothing to type or edit by hand.
 #
 # MANUAL SETUP (if you'd rather do it yourself): place this script directly
-# inside your instance's root folder (the one containing ".minecraft"), then
+# inside your instance's root folder (the one containing "minecraft"), then
 # set it as a Pre-Launch command in Prism: right-click instance -> Edit
 # Instance -> Settings -> Custom Commands -> enable "Pre-launch command":
 #   powershell -ExecutionPolicy Bypass -File "C:\path\to\update-modpack.ps1"
 # It finds its own instance folder automatically based on where it's saved -
-# no path to edit, as long as it's sitting next to ".minecraft".
+# no path to edit, as long as it's sitting next to "minecraft".
 
 $ManifestUrl = "https://raw.githubusercontent.com/BillieLurk/create-engineers-grimoire-pack/main/modrinth.index.json"
-$InstanceDir = Join-Path $PSScriptRoot ".minecraft"
+$InstanceDir = Join-Path $PSScriptRoot "minecraft"
 $Mode = "client"
 
 $ErrorActionPreference = "Stop"
@@ -30,7 +30,7 @@ Write-Host "Create Engineers' Grimoire updater - checking for pack updates..."
 
 if (-not (Test-Path $InstanceDir)) {
     Write-Host "ERROR: Instance folder not found: $InstanceDir"
-    Write-Host "Edit `$InstanceDir at the top of this script to point at your instance's .minecraft folder."
+    Write-Host "Edit `$InstanceDir at the top of this script to point at your instance's minecraft folder."
     exit 1
 }
 

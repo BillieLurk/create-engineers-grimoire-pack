@@ -7,7 +7,7 @@
 # script. Safe to run every launch - it's a no-op if nothing changed.
 #
 # SETUP (macOS client): place this script directly inside your instance's
-# root folder (the one containing ".minecraft") and it'll find its own
+# root folder (the one containing "minecraft") and it'll find its own
 # instance automatically. Then either double-click/run it before playing,
 # or (better) set it as a Pre-Launch command in Prism: right-click instance
 # -> Edit Instance -> Settings -> Custom Commands -> enable "Pre-launch
@@ -15,7 +15,7 @@
 #   /bin/bash "/path/to/update-modpack.sh"
 # Prefer not to move the script? Set INSTANCE_DIR as an env var or edit the
 # default below instead, e.g.
-#   "$HOME/Library/Application Support/PrismLauncher/instances/Create-Engineers-Grimoire/.minecraft"
+#   "$HOME/Library/Application Support/PrismLauncher/instances/Create-Engineers-Grimoire/minecraft"
 #
 # SETUP (a Linux server): set MODE=server and INSTANCE_DIR to the server's
 # root folder (the one containing mods/), then run this before each server
@@ -27,7 +27,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MANIFEST_URL="https://raw.githubusercontent.com/BillieLurk/create-engineers-grimoire-pack/main/modrinth.index.json"
-INSTANCE_DIR="${INSTANCE_DIR:-$SCRIPT_DIR/.minecraft}"
+INSTANCE_DIR="${INSTANCE_DIR:-$SCRIPT_DIR/minecraft}"
 MODE="${MODE:-client}"
 
 CACHE_FILE="$INSTANCE_DIR/.pack-manifest-installed.json"
@@ -38,7 +38,7 @@ echo "Create Engineers' Grimoire updater - checking for pack updates..."
 
 if [ ! -d "$INSTANCE_DIR" ]; then
     echo "ERROR: Instance folder not found: $INSTANCE_DIR"
-    echo "Set INSTANCE_DIR at the top of this script (or as an env var) to your .minecraft folder."
+    echo "Set INSTANCE_DIR at the top of this script (or as an env var) to your minecraft folder."
     exit 1
 fi
 
