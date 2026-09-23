@@ -1937,21 +1937,6 @@
       }
     },
     {
-      "path": "mods/Create-Linked-Thrusters-neoforge-1.21.1-1.4.1.jar",
-      "hashes": {
-        "sha1": "77bf20a75a5bc1199aea77d4e147027060f70805",
-        "sha512": "20ae097e29b66883e4bcc9875e95e6ba394b388c0a8420fae66e686d7a0bea570253d421096bbf89c15fe09e3fd938abd2dbf461ae2b0477dea58f924d60220e"
-      },
-      "downloads": [
-        "https://cdn.modrinth.com/data/bIyKdtMw/versions/g2mLrBG2/Create-Linked-Thrusters-neoforge-1.21.1-1.4.1.jar"
-      ],
-      "fileSize": 5184190,
-      "env": {
-        "client": "required",
-        "server": "required"
-      }
-    },
-    {
       "path": "mods/create_aeronautics_transmission_linkage-0.2.8.jar",
       "hashes": {
         "sha1": "bccaf90652905ae5f28dcc7e1134099d188ca020",
@@ -2001,5 +1986,5 @@
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 21
+  "pack_version": 22
 }
