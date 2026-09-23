@@ -6,24 +6,28 @@
 # sha1), removes mods no longer in the pack, and syncs the kubejs loot
 # script. Safe to run every launch - it's a no-op if nothing changed.
 #
-# SETUP (macOS client): set INSTANCE_DIR below to your instance's
-#   ".minecraft" folder, e.g.
-#   "$HOME/Library/Application Support/PrismLauncher/instances/Create-Engineers-Grimoire/.minecraft"
-# Then either double-click/run this script before playing, or (better) set
-# it as a Pre-Launch command in Prism: right-click instance -> Edit Instance
-# -> Settings -> Custom Commands -> enable "Pre-launch command":
+# SETUP (macOS client): place this script directly inside your instance's
+# root folder (the one containing ".minecraft") and it'll find its own
+# instance automatically. Then either double-click/run it before playing,
+# or (better) set it as a Pre-Launch command in Prism: right-click instance
+# -> Edit Instance -> Settings -> Custom Commands -> enable "Pre-launch
+# command":
 #   /bin/bash "/path/to/update-modpack.sh"
+# Prefer not to move the script? Set INSTANCE_DIR as an env var or edit the
+# default below instead, e.g.
+#   "$HOME/Library/Application Support/PrismLauncher/instances/Create-Engineers-Grimoire/.minecraft"
 #
-# SETUP (this Linux server): set MODE=server and INSTANCE_DIR to the
-# server's root folder (the one containing mods/), then run this before
-# each server start.
+# SETUP (a Linux server): set MODE=server and INSTANCE_DIR to the server's
+# root folder (the one containing mods/), then run this before each server
+# start.
 #
 # Requires: curl, python3 (used only for JSON parsing - ships with macOS).
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MANIFEST_URL="https://raw.githubusercontent.com/BillieLurk/create-engineers-grimoire-pack/main/modrinth.index.json"
-INSTANCE_DIR="${INSTANCE_DIR:-$HOME/Library/Application Support/PrismLauncher/instances/Create-Engineers-Grimoire/.minecraft}"
+INSTANCE_DIR="${INSTANCE_DIR:-$SCRIPT_DIR/.minecraft}"
 MODE="${MODE:-client}"
 
 CACHE_FILE="$INSTANCE_DIR/.pack-manifest-installed.json"
@@ -83,12 +87,26 @@ if os.path.exists(cache_path):
     except Exception:
         pass
 
-# Remove files no longer in the pack
+# Remove files no longer in the pack, per our own cache record
 for path in list(local_files):
     if path not in remote_files:
         full = os.path.join(instance_dir, path)
         if os.path.exists(full):
             print(f"Removing (no longer in pack): {path}")
+            os.remove(full)
+
+# Reconcile the actual mods/ folder against the manifest too - the cache
+# above only knows about files THIS script installed, so a mod that was
+# hand-installed, left over from before auto-update was set up, or added
+# by some other means (e.g. an old pack version, manual copy) won't be in
+# the cache and would otherwise never get cleaned up. This catches those.
+mods_dir = os.path.join(instance_dir, "mods")
+if os.path.isdir(mods_dir):
+    remote_mod_names = {os.path.basename(p) for p in remote_files if p.startswith("mods/")}
+    for name in os.listdir(mods_dir):
+        full = os.path.join(mods_dir, name)
+        if os.path.isfile(full) and name not in remote_mod_names:
+            print(f"Removing (not in pack, found on disk): mods/{name}")
             os.remove(full)
 
 # Download new or changed files

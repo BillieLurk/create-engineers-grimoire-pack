@@ -2,19 +2,25 @@
 #
 # Syncs this machine's Prism Launcher instance to whatever the pack manifest
 # says it should be. Downloads new/changed mods straight from Modrinth
-# (verified by sha1), removes mods no longer in the pack, and syncs the
+# (verified by sha1), removes mods no longer in the pack (even ones it
+# didn't install itself - see the reconciliation pass below), and syncs the
 # kubejs loot script. Safe to run every launch - it's a no-op if nothing
 # changed.
 #
-# SETUP: set $InstanceDir below to your instance's "minecraft" folder, e.g.
-#   C:\Users\<you>\AppData\Roaming\PrismLauncher\instances\Create-Engineers-Grimoire\.minecraft
-# Then either double-click this script before playing, or (better) set it as
-# a Pre-Launch command in Prism: right-click instance -> Edit Instance ->
-# Settings -> Custom Commands -> enable "Pre-launch command" and set it to:
+# EASIEST SETUP: run setup-v2-autoupdate.ps1 once (in this same package) -
+# it finds your instance, copies this script next to it, and wires up the
+# Prism pre-launch command automatically. Nothing to type or edit by hand.
+#
+# MANUAL SETUP (if you'd rather do it yourself): place this script directly
+# inside your instance's root folder (the one containing ".minecraft"), then
+# set it as a Pre-Launch command in Prism: right-click instance -> Edit
+# Instance -> Settings -> Custom Commands -> enable "Pre-launch command":
 #   powershell -ExecutionPolicy Bypass -File "C:\path\to\update-modpack.ps1"
+# It finds its own instance folder automatically based on where it's saved -
+# no path to edit, as long as it's sitting next to ".minecraft".
 
 $ManifestUrl = "https://raw.githubusercontent.com/BillieLurk/create-engineers-grimoire-pack/main/modrinth.index.json"
-$InstanceDir = "$env:APPDATA\PrismLauncher\instances\Create-Engineers-Grimoire\.minecraft"
+$InstanceDir = Join-Path $PSScriptRoot ".minecraft"
 $Mode = "client"
 
 $ErrorActionPreference = "Stop"
@@ -66,13 +72,29 @@ if ($local) {
     }
 }
 
-# Remove files that are no longer in the pack
+# Remove files that are no longer in the pack, per our own cache record
 foreach ($path in $localApplicable.Keys) {
     if (-not $remoteApplicable.ContainsKey($path)) {
         $full = Join-Path $InstanceDir $path
         if (Test-Path $full) {
             Write-Host "Removing (no longer in pack): $path"
             Remove-Item $full -Force
+        }
+    }
+}
+
+# Reconcile the actual mods/ folder against the manifest too - the cache
+# above only knows about files THIS script installed, so a mod that was
+# hand-installed, left over from before auto-update was set up, or added
+# by some other means (e.g. an old pack version, manual copy) won't be in
+# the cache and would otherwise never get cleaned up. This catches those.
+$modsDir = Join-Path $InstanceDir "mods"
+if (Test-Path $modsDir) {
+    $remoteModPaths = $remoteApplicable.Keys | Where-Object { $_ -like "mods/*" } | ForEach-Object { Split-Path $_ -Leaf }
+    Get-ChildItem -Path $modsDir -File | ForEach-Object {
+        if ($remoteModPaths -notcontains $_.Name) {
+            Write-Host "Removing (not in pack, found on disk): mods/$($_.Name)"
+            Remove-Item $_.FullName -Force
         }
     }
 }
