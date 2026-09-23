@@ -1980,11 +1980,26 @@
         "client": "required",
         "server": "required"
       }
+    },
+    {
+      "path": "mods/cookscollection-0.6.1.jar",
+      "hashes": {
+        "sha1": "46a4ec47cdb021ee2ecf9fdb5f54f7a6b6dc15dd",
+        "sha512": "d4534062cbc14a9d9c53670069e80c275f8e8051d4c5995c430f71870a3bef0d35a13e876bbcfc9d526320ba17b572df9b7117ab21d4851d361e0ba0cb23cbba"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/QC7N8ljN/versions/z1YUDQXH/cookscollection-0.6.1.jar"
+      ],
+      "fileSize": 400609,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 19
+  "pack_version": 20
 }
