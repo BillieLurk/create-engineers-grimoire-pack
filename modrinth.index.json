@@ -141,21 +141,6 @@
       }
     },
     {
-      "path": "mods/CreateDragonsPlus-1.11.7b.jar",
-      "hashes": {
-        "sha1": "36085362f1123273a2d8e8e7e8af86c32ac10251",
-        "sha512": "4b86f50641b95532d8662e333b1805f0938bf49d1fd9ee7bd4920dca7a4c3707e11f95d44d6a6ce250acc0d534f08ffd2a7891308d587c4d63ce63be3377ae83"
-      },
-      "downloads": [
-        "https://cdn.modrinth.com/data/dzb1a5WV/versions/zQDQbNih/CreateDragonsPlus-1.11.7b.jar"
-      ],
-      "fileSize": 1038830,
-      "env": {
-        "client": "required",
-        "server": "required"
-      }
-    },
-    {
       "path": "mods/create-new-age-1.2.0+neoforge-mc1.21.1.jar",
       "hashes": {
         "sha1": "849df57070ffa75c2446b9c460d03f6b49fa089e",
@@ -1995,11 +1980,26 @@
         "client": "required",
         "server": "required"
       }
+    },
+    {
+      "path": "mods/CreateDragonsPlus-1.11.9.jar",
+      "hashes": {
+        "sha1": "67ffcb61207a7dbc6b1e70f0473ddbacb19d44eb",
+        "sha512": "43299e49afe7132515aa8ad545b8c9566d90f12cfb39456b3d6e1ebc8e03f05787fbc420e7cc9495df4d6b585d13e7a4c4c7385f82f20aeb829c9491b725af53"
+      },
+      "downloads": [
+        "https://cdn.modrinth.com/data/dzb1a5WV/versions/b0u9vk8C/CreateDragonsPlus-1.11.9.jar"
+      ],
+      "fileSize": 1085674,
+      "env": {
+        "client": "required",
+        "server": "required"
+      }
     }
   ],
   "dependencies": {
     "minecraft": "1.21.1",
     "neoforge": "21.1.248"
   },
-  "pack_version": 20
+  "pack_version": 21
 }
